@@ -34,7 +34,7 @@ NOTION_DATABASE_ID=your_db_id
 ```
 
 ```js
-// set CONFIG as below in `.github/workflows/notion2md.js` if you want
+// set CONFIG as below in `notion2md.js` if you want
 const CONFIG ={  //default values
   days: 7,
   dir:'./posts',

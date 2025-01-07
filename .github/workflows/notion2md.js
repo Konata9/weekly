@@ -41,13 +41,13 @@ async function main() {
       filter: {
         and: [
           {
-            property: 'date',
+            property: 'Created time',
             date: {
               on_or_after: startDay
             }
           },
           {
-            property: 'date',
+            property: 'Created time',
             date: {
               before: today
             }
@@ -55,7 +55,7 @@ async function main() {
         ],
         sorts: [
           {
-            property: "date",
+            property: "Created time",
             direction: "ascending"
           }
         ],
@@ -72,6 +72,7 @@ async function main() {
     let mdContent = ''
     let secData = {}
     let mdImg = ''
+
     function setMdImg(img,txt){
       let desc = txt ? `<small>${txt}</small>\n\n` : ''
       return `<img src="${img}" width="800" />\n\n${desc}`
@@ -79,30 +80,34 @@ async function main() {
 
     let index = 0;
     for (const page of response.results) {
+      console.log('===== page results ====')
+      console.log(page)
 
       const cover = page.cover?.external?.url || page.cover?.file.url
 
       const props = page.properties
-      const title = props.title?.title[0].plain_text
-      // const content = props.desc?.rich_text[0]?.plain_text || ''
-      const content = props.desc?.rich_text.map(item => item.plain_text).join('') || ''
+      const title = props.Title?.title[0].plain_text
+      const category = props.Category?.select?.name
+
+      const url = props.URL?.url
+
+      const content = props.Description?.rich_text.map(item => item.plain_text).join('') || ''
       const img = props.img?.files[0]?.file?.url || props.img?.files[0]?.external?.url || ''
       const imgDesc = props.imgDesc?.rich_text[0]?.plain_text || ''
 
-      // const _content = content?.replace(/\s+/g, '').replace(/\n/g, '');
       const _content = content
       const targetStr = formatStr(_content)
-      const tag = (props.tags.multi_select && props.tags.multi_select[0]?.name) || props.tags.select?.name // support multi-select and single select
+      const tag = (props.Tags.multi_select && props.Tags.multi_select[0]?.name) || props.Tags.select?.name // support multi-select and single select
       const oneImg = cover ? `![](${cover})`:''
 
       if (tag) {
-        if (!secData[tag]) {
-          secData[tag] = []
-          secData[tag].index = 0
+        if (!secData[category]) {
+          secData[category] = []
+          secData[category].index = 0
         }
-        let idx = secData[tag].index++ // hack
+        let idx = secData[category].index++ // hack
         const oneMsg =`**${idx+1}、${title.trim()}**\n\n${targetStr}\n\n${oneImg}\n\n`
-        secData[tag].push(oneMsg)
+        secData[category].push(oneMsg)
       }
 
       if (img) {
