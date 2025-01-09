@@ -90,7 +90,7 @@ const processPage = (page) => {
     content: props.Description?.rich_text.map(item => item.plain_text).join('') || '',
     img: props.img?.files[0]?.file?.url || props.img?.files[0]?.external?.url || '',
     imgDesc: props.imgDesc?.rich_text[0]?.plain_text || '',
-    tag: (props.Tags.multi_select && props.Tags.multi_select[0]?.name) || props.Tags.select?.name,
+    tag: props.Tags.multi_select ? props.Tags.multi_select.map(tag => tag.name).join(',') : props.Tags.select?.name,
     cover
   };
 };
@@ -105,6 +105,7 @@ const generateMarkdown = (pages, today, startDay) => {
   pages.forEach((page) => {
     const {
       title,
+      url,
       category,
       content,
       img,
@@ -116,13 +117,14 @@ const generateMarkdown = (pages, today, startDay) => {
     const targetStr = formatStr(content);
     const oneImg = cover ? `![](${cover})` : '';
 
-    if (tag) {
+    if (category) {
       if (!secData[category]) {
         secData[category] = [];
         secData[category].index = 0;
       }
       const idx = secData[category].index++;
-      const oneMsg = `**${idx + 1}、${title.trim()}**\n\n${targetStr}\n\n${oneImg}\n\n`;
+      const titleWithUrl = url ? `[${title.trim()}](${url})` : title.trim();
+      const oneMsg = `**${idx + 1}、${titleWithUrl}**\n标签：${tag}\n\n${targetStr}\n\n${oneImg}\n\n`;
       secData[category].push(oneMsg);
     }
 
@@ -161,8 +163,11 @@ const writeMarkdownFile = (filePath, mdHead, mdImg, mdContent) => {
 const main = async () => {
   try {
     const { today, startDay } = getTimeRange();
+
+    console.log(`[INFO]: Processing data between ${startDay} and ${today}`);
+
     const pages = await getNotionData(startDay, today);
-    
+
     if (!pages) return;
 
     const { mid, mdHead, mdImg, mdContent } = generateMarkdown(pages, today, startDay);
