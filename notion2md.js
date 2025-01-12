@@ -1,9 +1,12 @@
 // CommonJS imports
-const { Client } = require('@notionhq/client');
-const moment = require('moment');
 const fs = require('fs');
 const path = require('path');
+
+const moment = require('moment');
 const dotenv = require('dotenv');
+const chalk = require('chalk');
+
+const { Client } = require('@notionhq/client');
 
 // Initialize environment
 if (!process.env.GITHUB_ACTIONS) {
@@ -18,6 +21,10 @@ const CONFIG = {
   dir: './posts',
   filename: '每周见闻'
 };
+
+const logInfo = (msg) => {
+  console.log(`${chalk.cyanBright('[Info]:')} ${msg}`);
+}
 
 // Time utils
 const getTimeRange = () => {
@@ -72,7 +79,7 @@ const getNotionData = async (startDay, today) => {
   });
 
   if (!response.results.length) {
-    console.log('no data');
+    logInfo(`No data found between ${startDay} and ${today}`);
     return null;
   }
 
@@ -97,12 +104,15 @@ const processPage = (page) => {
 
 const generateMarkdown = (pages, today, startDay) => {
   const mid = `${startDay}_${today}`.replace(/-/g, '');
-  const mdHead = `---\ndate: ${today.replace(/-/g, '/')}\ntoc: true\n---\n\n`;
-  let mdContent = '';
+  const mdHead = `---\ndate: ${today.replace(/-/g, '/')}\ntoc: true\n---\n\n每周见闻分享：${startDay} - ${today}\n\n`;
   const secData = {};
-  let mdImg = '';
+  const footnotes = []
 
-  pages.forEach((page) => {
+  let mdImg = '';
+  let mdContent = '';
+  let footnoteIdx = 0
+
+  pages.forEach((page, index) => {
     const {
       title,
       url,
@@ -118,12 +128,16 @@ const generateMarkdown = (pages, today, startDay) => {
     const oneImg = cover ? `![](${cover})` : '';
 
     if (category) {
+      footnoteIdx += 1
+      footnotes.push(`[${footnoteIdx}] ${title.trim()}: ${url}`)
+
       if (!secData[category]) {
         secData[category] = [];
         secData[category].index = 0;
       }
+
       const idx = secData[category].index++;
-      const titleWithUrl = url ? `[${title.trim()}](${url})` : title.trim();
+      const titleWithUrl = url ? `[${title.trim()}](${url})[^${footnoteIdx}]` : title.trim();
       const oneMsg = `**${idx + 1}、${titleWithUrl}**\n标签：${tag}\n\n${targetStr}\n\n${oneImg}\n\n`;
       secData[category].push(oneMsg);
     }
@@ -134,10 +148,12 @@ const generateMarkdown = (pages, today, startDay) => {
   });
 
   Object.keys(secData).forEach(key => {
-    mdContent += `## ${key}\n${secData[key].join('')}`;
+    mdContent += `## ${key}\n${secData[key].join('')}\n----\n\n`;
   });
 
-  return { mid, mdHead, mdImg, mdContent };
+  const mdFootnotes = footnotes.length > 0 ? `### 参考文章:\n${footnotes.join('\n')}` : '';
+
+  return { mid, mdHead, mdImg, mdContent, mdFootnotes };
 };
 
 // File operations
@@ -154,8 +170,8 @@ const getFilePath = (mid) => {
   return path.join(CONFIG.dir, fileName);
 };
 
-const writeMarkdownFile = (filePath, mdHead, mdImg, mdContent) => {
-  const fileContent = `${mdHead}${mdImg}${mdContent}`;
+const writeMarkdownFile = (filePath, mdHead, mdImg, mdContent, mdFootnotes) => {
+  const fileContent = `${mdHead}${mdImg}${mdContent}${mdFootnotes}`;
   fs.writeFileSync(filePath, fileContent);
 };
 
@@ -164,15 +180,15 @@ const main = async () => {
   try {
     const { today, startDay } = getTimeRange();
 
-    console.log(`[INFO]: Processing data between ${startDay} and ${today}`);
+    logInfo(`Processing data between ${startDay} and ${today}`);
 
     const pages = await getNotionData(startDay, today);
 
     if (!pages) return;
 
-    const { mid, mdHead, mdImg, mdContent } = generateMarkdown(pages, today, startDay);
+    const { mid, mdHead, mdImg, mdContent, mdFootnotes } = generateMarkdown(pages, today, startDay);
     const filePath = getFilePath(mid);
-    writeMarkdownFile(filePath, mdHead, mdImg, mdContent);
+    writeMarkdownFile(filePath, mdHead, mdImg, mdContent, mdFootnotes);
   } catch (error) {
     console.error("Error:", error);
     process.exit(1);
