@@ -18,7 +18,7 @@ const databaseId = process.env.NOTION_DATABASE_ID;
 
 const CONFIG = {
   days: 7,
-  dir: './posts',
+  dir: path.resolve(__dirname, './weekly/source/_posts'),
   filename: '每周见闻'
 };
 
@@ -104,7 +104,8 @@ const processPage = (page) => {
 
 const generateMarkdown = (pages, today, startDay) => {
   const mid = `${startDay}_${today}`.replace(/-/g, '');
-  const mdHead = `---\ndate: ${today.replace(/-/g, '/')}\ntoc: true\n---\n\n每周见闻分享：${startDay} - ${today}\n\n`;
+  const mdHead = `---\ntitle: 每周见闻分享：${startDay} - ${today}\ndate: ${moment().format('YYYY-MM-DD HH:mm:ss')}\ntoc: true\n---\n\n每周见闻分享：${startDay} - ${today}\n\n`;
+
   const secData = {};
   const footnotes = []
 
@@ -129,7 +130,7 @@ const generateMarkdown = (pages, today, startDay) => {
 
     if (category) {
       footnoteIdx += 1
-      footnotes.push(`[${footnoteIdx}] ${title.trim()}: ${url}`)
+      footnotes.push(`- [${footnoteIdx}] ${title.trim()}: ${url}`)
 
       if (!secData[category]) {
         secData[category] = [];
@@ -138,7 +139,7 @@ const generateMarkdown = (pages, today, startDay) => {
 
       const idx = secData[category].index++;
       const titleWithUrl = url ? `[${title.trim()}](${url})[^${footnoteIdx}]` : title.trim();
-      const oneMsg = `**${idx + 1}、${titleWithUrl}**\n标签：${tag}\n\n${targetStr}\n\n${oneImg}\n\n`;
+      const oneMsg = `**${idx + 1}、${titleWithUrl}**\n\n标签：${tag}\n\n${targetStr}\n\n${oneImg}\n\n`;
       secData[category].push(oneMsg);
     }
 
@@ -151,7 +152,7 @@ const generateMarkdown = (pages, today, startDay) => {
     mdContent += `## ${key}\n${secData[key].join('')}\n----\n\n`;
   });
 
-  const mdFootnotes = footnotes.length > 0 ? `### 参考文章:\n${footnotes.join('\n')}` : '';
+  const mdFootnotes = footnotes.length > 0 ? `## 参考文章:\n${footnotes.join('\n')}` : '';
 
   return { mid, mdHead, mdImg, mdContent, mdFootnotes };
 };

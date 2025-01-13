@@ -4,7 +4,9 @@
   "description": "Automatically convert Notion database to markdown files periodically",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node notion2md.js"
+    "build": "node notion2md.js",
+    "server": "cd ./weekly && npm run server",
+    "deploy": "cd ./weekly && npm run deploy"
   },
   "keywords": [],
   "author": "chanthinker@foxmail.com",
@@ -13,6 +15,7 @@
     "@notionhq/client": "^2.2.15",
     "chalk": "^4.1.2",
     "dotenv": "^16.4.5",
+    "hexo": "^7.3.0",
     "moment": "^2.30.1"
   }
 }
