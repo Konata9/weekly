@@ -1,0 +1,707 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Konata">
+  <meta name="keywords" content="此方,Konata,Konata9,周刊,分享,记录,技术">
+  
+    <meta name="description" content="每周见闻分享：2025-01-05 - 2025-01-12 其他1、我是如何从零开始手搓一个独立游戏并上架 Steam 的 - V2EX[^1] 标签：Life,励志 讲述了作者历经 5 年制作独立游戏《中国式加班》的完整过程。包括了构思和规划、美术、引擎选型、剧本构思。中途一度因资源不足夭折，最后又借助 AI 完成第一版并成功上架 Steam。 非常佩服作者的坚持。AI 降低了门槛，让很多事情">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每周见闻分享：2025-01-05 - 2025-01-12">
+<meta property="og:url" content="http://example.com/2025/01/12/01-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250105_20250112/index.html">
+<meta property="og:site_name" content="此方的手帐">
+<meta property="og:description" content="每周见闻分享：2025-01-05 - 2025-01-12 其他1、我是如何从零开始手搓一个独立游戏并上架 Steam 的 - V2EX[^1] 标签：Life,励志 讲述了作者历经 5 年制作独立游戏《中国式加班》的完整过程。包括了构思和规划、美术、引擎选型、剧本构思。中途一度因资源不足夭折，最后又借助 AI 完成第一版并成功上架 Steam。 非常佩服作者的坚持。AI 降低了门槛，让很多事情">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hhacker.com/wp-content/uploads/2025/01/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2025-01-01-221738.png">
+<meta property="og:image" content="https://cdnfile.sspai.com/2024/02/02/article/4b718cfa0cbb0ca738087f48d106e3e8?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://wukan.me/wp-content/uploads/2024/12/DALL%C2%B7E-2024-12-10-23.19.16-A-highly-minimalistic-and-abstract-illustration-symbolizing-the-contrast-between-two-work-cultures-formatted-in-a-16_9-aspect-ratio.-The-image-featur-768x439.webp">
+<meta property="og:image" content="https://prod-files-secure.s3.us-west-2.amazonaws.com/44cb6954-457a-4a64-b86e-85f433992a93/f6f89fe3-fe5e-4211-ae67-9810d82f1604/stn-LrT5834M7sDxQdgk89aT6GgoFHU1j0Q6kStFGmvb.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X/20250112/us-west-2/s3/aws4_request&X-Amz-Date=20250112T150138Z&X-Amz-Expires=3600&X-Amz-Signature=282cc1b30235780f60709c64defd13c073ccdd032e026ddf0aef12d79e95b6b4&X-Amz-SignedHeaders=host&x-id=GetObject">
+<meta property="og:image" content="http://example.com/images/ppbzy.webp">
+<meta property="og:image" content="https://weiyen.net/articles/useful-macos-cmd-line-utilities/oggraph.png">
+<meta property="article:published_time" content="2025-01-12T15:01:39.000Z">
+<meta property="article:modified_time" content="2025-01-13T14:58:51.429Z">
+<meta property="article:author" content="Konata">
+<meta property="article:tag" content="此方,Konata,Konata9,周刊,分享,记录,技术">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hhacker.com/wp-content/uploads/2025/01/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2025-01-01-221738.png">
+  
+  
+  
+  <title>每周见闻分享：2025-01-05 - 2025-01-12 - 此方的手帐</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-HZE2KZXTWN"},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"BirbQk2IcLjcATgSrzYGJHe7-MdYXbMMI","app_key":"WrRy9Sjv7hCFj1jO9Tm10BYi","server_url":"https://birbqk2i.api.lncldglobal.com","path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-HZE2KZXTWN", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-HZE2KZXTWN');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>此方的周刊</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml" target="_self">
+                <i class="iconfont icon-rss-fill"></i>
+                <span>RSS</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://konata9.github.io" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>Blog</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="每周见闻分享：2025-01-05 - 2025-01-12"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-01-12 23:01" pubdate>
+          2025年1月12日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          988 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          11 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">每周见闻分享：2025-01-05 - 2025-01-12</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>每周见闻分享：2025-01-05 - 2025-01-12</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://www.v2ex.com/t/1102126">我是如何从零开始手搓一个独立游戏并上架 Steam 的 - V2EX</a>[^1]</strong></p>
+<p>标签：Life,励志</p>
+<p>讲述了作者历经 5 年制作独立游戏《中国式加班》的完整过程。<br>包括了构思和规划、美术、引擎选型、剧本构思。中途一度因资源不足夭折，最后又借助 AI 完成第一版并成功上架 Steam。</p>
+<p>非常佩服作者的坚持。AI 降低了门槛，让很多事情变得可能。特别赞同完成比完美更重要这一点。过早追求完美，反而可能是最大的阻力。值得细细阅读。</p>
+<p><img src="https://hhacker.com/wp-content/uploads/2025/01/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2025-01-01-221738.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>2、<a target="_blank" rel="noopener" href="https://sspai.com/post/86260">万字干货！手把手带你根除手机&amp;短视频成瘾？ - 少数派</a>[^2]</strong></p>
+<p>标签：自律,时间管理</p>
+<p>我自己应该是有些手机依赖的，感觉自己能静下心做事的时间变短了。为此我打开了屏幕时间功能，某站在使用时间上确实独占鳌头。这篇文章有点长，但是讲的很详细。快消或者奶头乐通过不断地刺激会逐渐封锁认知，消磨掉我们的“有效时间”。</p>
+<p>其中内因可以分为无聊成瘾以及放松成瘾；外因则是推荐算法。两者加持下提高对刺激的阈值，从而逐渐成瘾。类似一刀切的强行对抗，不仅需要强大的意志力而且也不能从根本上解决问题。</p>
+<p>作者提出将日程排满以及通过引入更多好的习惯来“冲淡”刷视频的习惯，似乎比较可行。打算试着尝试一下。</p>
+<p><img src="https://cdnfile.sspai.com/2024/02/02/article/4b718cfa0cbb0ca738087f48d106e3e8?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><strong>3、<a target="_blank" rel="noopener" href="https://wukan.me/?p=2649">四年五个月 – 阿倫的孤獨星球</a>[^4]</strong></p>
+<p>标签：Life,工作</p>
+<p>讲述了作者 4 年 5 个月的时间分别在国内与国外的工作经历（都是在外企）。对比了两边的生活体验以及对产品的看法和技术氛围。有种“一方水土养一方人”的感觉。<br>国内对领导的心理按摩是造成卷的原因之一，而这背后也体现了对员工个体的尊重与信任。</p>
+<p><img src="https://wukan.me/wp-content/uploads/2024/12/DALL%C2%B7E-2024-12-10-23.19.16-A-highly-minimalistic-and-abstract-illustration-symbolizing-the-contrast-between-two-work-cultures-formatted-in-a-16_9-aspect-ratio.-The-image-featur-768x439.webp" srcset="/img/loading.gif" lazyload></p>
+<p><strong>4、<a target="_blank" rel="noopener" href="https://sspai.com/post/95152">2024年的大环境下；开了个副业淘宝店的过程记录与阶段性感悟 - 少数派</a>[^6]</strong></p>
+<p>标签：Life,副业</p>
+<p>被标题吸引，读完发现很有意思。<br>作者详细讲述了自己开淘宝店作为副业的过程。包括了开店、引流、定价、客服等。没有噱头，全是作者的感受。实打实的细节和干货，非常值得一读。<br>看完最深的感受是一个店背后各种事务真的很复杂。除了自己要有渠道和相应的知识外，其他的事情也很多。</p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/44cb6954-457a-4a64-b86e-85f433992a93/f6f89fe3-fe5e-4211-ae67-9810d82f1604/stn-LrT5834M7sDxQdgk89aT6GgoFHU1j0Q6kStFGmvb.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45FSPPWI6X/20250112/us-west-2/s3/aws4_request&X-Amz-Date=20250112T150138Z&X-Amz-Expires=3600&X-Amz-Signature=282cc1b30235780f60709c64defd13c073ccdd032e026ddf0aef12d79e95b6b4&X-Amz-SignedHeaders=host&x-id=GetObject" srcset="/img/loading.gif" lazyload></p>
+<hr>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://www.ppbzy.com/">泡泡白噪音-倾听下雨的声音</a>[^3]</strong></p>
+<p>标签：Tools</p>
+<p>白噪音的工具网站。自带一个番茄钟和电子木鱼（笑）。最近休息在家的时候，有点没法集中，尝试一下。有预设好的模式，可以直接使用。</p>
+<p><img src="/images/ppbzy.webp" srcset="/img/loading.gif" lazyload></p>
+<p><strong>2、<a target="_blank" rel="noopener" href="https://weiyen.net/articles/useful-macos-cmd-line-utilities/">Useful built-in macOS command-line utilities</a>[^5]</strong></p>
+<p>标签：Mac</p>
+<p>介绍了一些 Mac 内置的终端命令。我觉得比较有用的是下面几个命令，可以不用再去网上找在线工具了。</p>
+<ol>
+<li>查看日期的 date 命令。</li>
+<li>生成 UUID 的 uuidgen 。</li>
+<li>剪切板相关命令 pbcopy 和 pbpaste 。</li>
+</ol>
+<p><img src="https://weiyen.net/articles/useful-macos-cmd-line-utilities/oggraph.png" srcset="/img/loading.gif" lazyload></p>
+<hr>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h2><ul>
+<li>[1] 我是如何从零开始手搓一个独立游戏并上架 Steam 的 - V2EX: <a target="_blank" rel="noopener" href="https://www.v2ex.com/t/1102126">https://www.v2ex.com/t/1102126</a></li>
+<li>[2] 万字干货！手把手带你根除手机&amp;短视频成瘾？ - 少数派: <a target="_blank" rel="noopener" href="https://sspai.com/post/86260">https://sspai.com/post/86260</a></li>
+<li>[3] 泡泡白噪音-倾听下雨的声音: <a target="_blank" rel="noopener" href="https://www.ppbzy.com/">https://www.ppbzy.com/</a></li>
+<li>[4] 四年五个月 – 阿倫的孤獨星球: <a target="_blank" rel="noopener" href="https://wukan.me/?p=2649">https://wukan.me/?p=2649</a></li>
+<li>[5] Useful built-in macOS command-line utilities: <a target="_blank" rel="noopener" href="https://weiyen.net/articles/useful-macos-cmd-line-utilities/">https://weiyen.net/articles/useful-macos-cmd-line-utilities/</a></li>
+<li>[6] 2024年的大环境下；开了个副业淘宝店的过程记录与阶段性感悟 - 少数派: <a target="_blank" rel="noopener" href="https://sspai.com/post/95152">https://sspai.com/post/95152</a></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>每周见闻分享：2025-01-05 - 2025-01-12</div>
+      <div>http://example.com/2025/01/12/01-每周见闻-20250105_20250112/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Konata</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年1月12日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-cc-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-cc-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    
+      <script>
+        Fluid.utils.loadComments('#disqus_thread', function() {
+          Fluid.utils.createCssLink('https://lib.baomitu.com/disqusjs/1.3.0/disqusjs.css');
+          Fluid.utils.createScript('https://lib.baomitu.com/disqusjs/1.3.0/disqus.js', function() {
+            new DisqusJS({
+              shortname: 'konata-blog',
+              apikey: 'AlTcCrDugoy7nYInPZA5SdHFdvQxfiUdMNuifiFG54hy9yqNHkj7wUrRFuJXmBrv'
+            });
+          });
+        });
+      </script>
+    
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
