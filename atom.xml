@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>此方的手帐</title>
+  <icon>https://konata9.github.io/weekly/icon.png</icon>
+  <subtitle>Konata&#39;s Weekly</subtitle>
+  <link href="https://konata9.github.io/weekly/atom.xml" rel="self"/>
+  
+  <link href="https://konata9.github.io/weekly/"/>
+  <updated>2025-01-13T14:58:51.429Z</updated>
+  <id>https://konata9.github.io/weekly/</id>
+  
+  <author>
+    <name>Konata</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每周见闻分享：2025-01-05 - 2025-01-12</title>
+    <link href="https://konata9.github.io/weekly/2025/01/12/01-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250105_20250112/"/>
+    <id>https://konata9.github.io/weekly/2025/01/12/01-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250105_20250112/</id>
+    <published>2025-01-12T15:01:39.000Z</published>
+    <updated>2025-01-13T14:58:51.429Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;每周见闻分享：2025-01-05 - 2025-01-12&lt;/p&gt;
+&lt;h2 id=&quot;其他&quot;&gt;&lt;a href=&quot;#其他&quot; class=&quot;headerlink&quot; title=&quot;其他&quot;&gt;&lt;/a&gt;其他&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1、&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
