@@ -21,25 +21,27 @@
   <meta name="author" content="Konata">
   <meta name="keywords" content="此方,Konata,Konata9,周刊,分享,记录,技术">
   
-    <meta name="description" content="每周见闻分享：2025-01-19 - 2025-01-26 Coding1、EP146: The Open Source AI Stack[^1] 标签：架构 ByteByteGo 的 Newsletter。可以用 RSS Hub 作为 RSS 订阅。每周一篇都是和架构相关内容。图片做的非常棒。 这篇我着重看了鉴权方式的部分。Cookies Vs Sessions Vs JWT Vs PASET">
+    <meta name="description" content="每周见闻分享：2025-01-26 - 2025-02-02 工具1、Ghostty[^1] 标签：Tools 一个终端模拟器，类似 iTerm2、Tabby。利用了 GPU 和 CPU 加速。 目前使用下来体验不错，速度比 iTerm2 和 Tabby 要快且无缝支持 zsh 的配置。唯一的缺点是配置文件需要自己去看文档写，没有 GUI 界面。   Coding1、ArkType[^2] 标签：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="每周见闻分享：2025-01-19 - 2025-01-26">
-<meta property="og:url" content="https://konata9.github.io/weekly/2025/01/26/03-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250119_20250126/index.html">
+<meta property="og:title" content="每周见闻分享：2025-01-26 - 2025-02-02">
+<meta property="og:url" content="https://konata9.github.io/weekly/2025/02/02/04-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250126_20250202/index.html">
 <meta property="og:site_name" content="此方的手帐">
-<meta property="og:description" content="每周见闻分享：2025-01-19 - 2025-01-26 Coding1、EP146: The Open Source AI Stack[^1] 标签：架构 ByteByteGo 的 Newsletter。可以用 RSS Hub 作为 RSS 订阅。每周一篇都是和架构相关内容。图片做的非常棒。 这篇我着重看了鉴权方式的部分。Cookies Vs Sessions Vs JWT Vs PASET">
+<meta property="og:description" content="每周见闻分享：2025-01-26 - 2025-02-02 工具1、Ghostty[^1] 标签：Tools 一个终端模拟器，类似 iTerm2、Tabby。利用了 GPU 和 CPU 加速。 目前使用下来体验不错，速度比 iTerm2 和 Tabby 要快且无缝支持 zsh 的配置。唯一的缺点是配置文件需要自己去看文档写，没有 GUI 界面。   Coding1、ArkType[^2] 标签：">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1c328642-7222-4127-a6c5-16614e010022_1283x1536.jpeg">
-<meta property="og:image" content="https://d2lang.com/img/opengraph.png">
-<meta property="article:published_time" content="2025-01-26T13:48:55.000Z">
-<meta property="article:modified_time" content="2025-02-02T15:13:45.707Z">
+<meta property="og:image" content="https://ghostty.org/social-share-card.jpg">
+<meta property="og:image" content="https://konata9.github.io/weekly/images/2025/arktype.webp">
+<meta property="og:image" content="https://konata9.github.io/weekly/images/2025/safe-assignment.webp">
+<meta property="og:image" content="https://external-preview.redd.it/problematic-second-how-the-leap-second-occurring-only-27-v0-Z9P05vL4s6Z3mcXjAxcxwy6C8p64zhxV_-vlWRmRmkQ.jpg?auto=webp&s=e7112eb8e30bef1ac3b1cb98c817c9f48b7bd0a2">
+<meta property="article:published_time" content="2025-02-02T15:13:43.000Z">
+<meta property="article:modified_time" content="2025-02-02T15:18:24.260Z">
 <meta property="article:author" content="Konata">
 <meta property="article:tag" content="此方,Konata,Konata9,周刊,分享,记录,技术">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1c328642-7222-4127-a6c5-16614e010022_1283x1536.jpeg">
+<meta name="twitter:image" content="https://ghostty.org/social-share-card.jpg">
   
   
   
-  <title>每周见闻分享：2025-01-19 - 2025-01-26 - 此方的手帐</title>
+  <title>每周见闻分享：2025-01-26 - 2025-02-02 - 此方的手帐</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="每周见闻分享：2025-01-19 - 2025-01-26"></span>
+            <span id="subtitle" data-typed-text="每周见闻分享：2025-01-26 - 2025-02-02"></span>
           
         </div>
 
@@ -224,8 +226,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-01-26 21:48" pubdate>
-          2025年1月26日 晚上
+        <time datetime="2025-02-02 23:13" pubdate>
+          2025年2月2日 晚上
         </time>
       </span>
     
@@ -236,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          467 字
+          436 字
         
       </span>
     
@@ -247,7 +249,7 @@
         
         
         
-          6 分钟
+          5 分钟
         
       </span>
     
@@ -284,35 +286,38 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">每周见闻分享：2025-01-19 - 2025-01-26</h1>
+            <h1 id="seo-header">每周见闻分享：2025-01-26 - 2025-02-02</h1>
             
             
               <div class="markdown-body">
                 
-                <p>每周见闻分享：2025-01-19 - 2025-01-26</p>
-<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://blog.bytebytego.com/p/ep146-the-open-source-ai-stack">EP146: The Open Source AI Stack</a>[^1]</strong></p>
-<p>标签：架构</p>
-<p>ByteByteGo 的 Newsletter。可以用 RSS Hub 作为 RSS 订阅。每周一篇都是和架构相关内容。图片做的非常棒。</p>
-<p>这篇我着重看了鉴权方式的部分。Cookies Vs Sessions Vs JWT Vs PASETO 介绍了常见的几种鉴权方式以及优缺点。除了 PASETO 没有接触过，之后要找机会了解一下。</p>
-<p><img src="https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1c328642-7222-4127-a6c5-16614e010022_1283x1536.jpeg" srcset="/weekly/img/loading.gif" lazyload></p>
-<hr>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://www.dev-life.site/">自洽的程序员</a>[^2]</strong></p>
-<p>标签：Life,工作,思考</p>
-<p>我看的两个周刊都在推这本书。书名虽然带着“程序员”，但内容主要集中于调整工作中的心态。每一篇都很短，阅读起来没有负担。没有专业名词、没有方法论，更像是一个学长&#x2F;前辈跟你聊天的感觉， 轻松的同时也有所收获。</p>
-<p>我阅读了第三章并回顾工作中的一些表现，确实还有需要改进的地方。很受用，非常值得一读。</p>
-<p>放一些我认为不错的观点：<br> 工作中的挣扎就像人生的必修课：不是你的错，但要你来解决。不是你能控制的，但要你来负责。不是你想要的，但要你来面对。</p>
-<p> 工作就像人生的一个维度：它很重要，但不是唯一。它需要投入，但要有度。它值得认真，但别太执着。</p>
-<hr>
-<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://d2lang.com/">Home | D2 Documentation</a>[^3]</strong></p>
+                <p>每周见闻分享：2025-01-26 - 2025-02-02</p>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://ghostty.org/">Ghostty</a>[^1]</strong></p>
 <p>标签：Tools</p>
-<p>类似 Markdown 中作图的方式，通过写代码的方式来制作类图、流程图等。语法比 Mermaid 要复杂，但相对的做出的图片的效果也比 Mermaid 更好。</p>
-<p>个人还是比较喜欢代码做图的方式，容易保存和修改。等有机会试一下。</p>
-<p><img src="https://d2lang.com/img/opengraph.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<p>一个终端模拟器，类似 iTerm2、Tabby。利用了 GPU 和 CPU 加速。</p>
+<p>目前使用下来体验不错，速度比 iTerm2 和 Tabby 要快且无缝支持 zsh 的配置。唯一的缺点是配置文件需要自己去看文档写，没有 GUI 界面。</p>
+<p><img src="https://ghostty.org/social-share-card.jpg" srcset="/weekly/img/loading.gif" lazyload></p>
+<hr>
+<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://arktype.io/">ArkType</a>[^2]</strong></p>
+<p>标签：Resource,JavaScript,TypeScript</p>
+<p>一个类似于 Joi 的校验库。官网上写着有更好的错误提示、性能上也比其他库如 Zod、Yup 要强。</p>
+<p>工作中使用 Joi，但苦于其效率和多版本之间的冲突也一直在看其他类似的库。这个库比较新，生态方面并没有 Zod 完善，考虑到迁移和文档自动生成的成本，选择 Zod 的可能性更高。</p>
+<p><img src="/weekly/images/2025/arktype.webp" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>2、<a target="_blank" rel="noopener" href="https://nalanj.dev/posts/safe-assignment/">Safe Assignment | Alan Johnson</a>[^3]</strong></p>
+<p>标签：JavaScript</p>
+<p>一个关于 JS try&#x2F;catch 语法的新提案。<br>const [error, value] ?&#x3D; maybeThrows();<br>看着像 Go 的语法，主要是节约了 try&#x2F;catch 的代码长度以及避免在外层多定义 let 来对错误做处理。</p>
+<p>文章给出了类似的实现，看了更有种回调时期的感觉。不过同样的讨论，之前翻译过的一篇感觉说的更清新一些。<br>译：在 TypeScript 中像 Go 和 Rust 那样处理错误？没有 Try&#x2F;Catch(<a href="https://konata9.github.io/2024/05/10/2024/translate-ts-with-go-and-rust-errors/)">https://konata9.github.io/2024/05/10/2024/translate-ts-with-go-and-rust-errors/)</a></p>
+<p><img src="/weekly/images/2025/safe-assignment.webp" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>3、<a target="_blank" rel="noopener" href="https://docs.timetime.in/blog/how-long-is-a-second-in-js/">How long is a second in JavaScript? | TimeTime</a>[^4]</strong></p>
+<p>标签：JavaScript</p>
+<p>很不错的一篇文章，从 1 秒入手介绍了 JavaScript 中时间相关的知识。 UTC 和 POSIX 的区别，特别是对于闰秒的处理。更多的是通用概念的介绍。</p>
+<p><img src="https://external-preview.redd.it/problematic-second-how-the-leap-second-occurring-only-27-v0-Z9P05vL4s6Z3mcXjAxcxwy6C8p64zhxV_-vlWRmRmkQ.jpg?auto=webp&s=e7112eb8e30bef1ac3b1cb98c817c9f48b7bd0a2" srcset="/weekly/img/loading.gif" lazyload></p>
 <hr>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h2><ul>
-<li>[1] EP146: The Open Source AI Stack: <a target="_blank" rel="noopener" href="https://blog.bytebytego.com/p/ep146-the-open-source-ai-stack">https://blog.bytebytego.com/p/ep146-the-open-source-ai-stack</a></li>
-<li>[2] 自洽的程序员: <a target="_blank" rel="noopener" href="https://www.dev-life.site/">https://www.dev-life.site/</a></li>
-<li>[3] Home | D2 Documentation: <a target="_blank" rel="noopener" href="https://d2lang.com/">https://d2lang.com/</a></li>
+<li>[1] Ghostty: <a target="_blank" rel="noopener" href="https://ghostty.org/">https://ghostty.org/</a></li>
+<li>[2] ArkType: <a target="_blank" rel="noopener" href="https://arktype.io/">https://arktype.io/</a></li>
+<li>[3] Safe Assignment | Alan Johnson: <a target="_blank" rel="noopener" href="https://nalanj.dev/posts/safe-assignment/">https://nalanj.dev/posts/safe-assignment/</a></li>
+<li>[4] How long is a second in JavaScript? | TimeTime: <a target="_blank" rel="noopener" href="https://docs.timetime.in/blog/how-long-is-a-second-in-js/">https://docs.timetime.in/blog/how-long-is-a-second-in-js/</a></li>
 </ul>
 
                 
@@ -331,8 +336,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>每周见闻分享：2025-01-19 - 2025-01-26</div>
-      <div>https://konata9.github.io/weekly/2025/01/26/03-每周见闻-20250119_20250126/</div>
+      <div>每周见闻分享：2025-01-26 - 2025-02-02</div>
+      <div>https://konata9.github.io/weekly/2025/02/02/04-每周见闻-20250126_20250202/</div>
     </div>
     <div class="license-meta">
       
@@ -344,7 +349,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年1月26日</div>
+          <div>2025年2月2日</div>
         </div>
       
       
@@ -388,18 +393,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/weekly/2025/02/02/04-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250126_20250202/" title="每周见闻分享：2025-01-26 - 2025-02-02">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">每周见闻分享：2025-01-26 - 2025-02-02</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/weekly/2025/01/19/02-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250112_20250119/" title="每周见闻分享：2025-01-12 - 2025-01-19">
-                        <span class="hidden-mobile">每周见闻分享：2025-01-12 - 2025-01-19</span>
+                      <a href="/weekly/2025/01/26/03-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250119_20250126/" title="每周见闻分享：2025-01-19 - 2025-01-26">
+                        <span class="hidden-mobile">每周见闻分享：2025-01-19 - 2025-01-26</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
