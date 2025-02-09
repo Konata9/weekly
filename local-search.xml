@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>每周见闻分享：2025-02-02 - 2025-02-09</title>
+    <link href="/weekly/2025/02/09/05-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250202_20250209/"/>
+    <url>/weekly/2025/02/09/05-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250202_20250209/</url>
+    
+    <content type="html"><![CDATA[<p>每周见闻分享：2025-02-02 - 2025-02-09</p><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a href="https://yazi-rs.github.io/">Yazi</a>[^1]</strong></p><p>标签：Tools,Mac</p><p>闲逛 B 站时推送的视频，被名字吸引。是一个终端的文件管理工具。特别适合平时在终端工作的同学。作者也是一个国人大佬：三咲雅 · Misaki Masa</p><p>使用下来体验很棒，绝非传统的 cd&#x2F;ls&#x2F;cat 命令组合能比的。还能配合 Neovim 非常丝滑。</p><p>推荐插件：</p><ol><li>yazi.nvim: Neovim 插件。 <a href="https://github.com/mikavilpas/yazi.nvim">https://github.com/mikavilpas/yazi.nvim</a></li><li>full-border: 瞬间让 yazi 的界面高大上起来。 <a href="https://github.com/yazi-rs/plugins/tree/main/full-border.yazi">https://github.com/yazi-rs/plugins/tree/main/full-border.yazi</a></li><li>icons-brew: 为不同的文件添加 icon，让界面更美观。 <a href="https://github.com/lpnh/icons-brew.yazi">https://github.com/lpnh/icons-brew.yazi</a></li></ol><p><img src="https://yazi-rs.github.io/img/logo.png"></p><p><strong>2、<a href="https://readpo.com/zh/poster">ReadPo</a>[^4]</strong></p><p>标签：Tools,AI</p><p>在寻找 Markdown 转图片时找到的这个网站。提供了一个免费的在线转换工具。</p><p>这个网站主要的功能是基于主题的 AI 辅助写作工具。同一个主题下可以订阅不同的源，如 Google、RSS 等，AI 可以根据这些内容生成文章。主要的应用场景就是新闻、资讯介绍、事件追踪等文章。</p><p>免费版支持 2 个主题，每月 30 个 cridets。每个主题可以根据 5 个文章生成 AI 总结内容，挺有意思的工具。</p><p><img src="/weekly/images/2025/readpo.webp"></p><hr><h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p><strong>1、<a href="https://www.infoworld.com/article/2269523/put-business-logic-in-the-application-not-the-database.html">Put business logic in the application, not the database</a>[^2]</strong></p><p>标签：架构,Design</p><p>有些年头的文章了，其主旨是尽可能地把业务逻辑放到应用层而非数据库，并且给出了原因：</p><ol><li>数据库比起应用层，资源更加稀缺。</li><li>逻辑后移到数据库会增加负担，造成应用层资源的浪费。</li><li>数据库拓展成本比应用层更高。</li></ol><p>应该是针对 SQL 存储过程写的。我在实际工作中主要使用 MongoDB，基本不会出现业务逻辑在数据库的情况也没人会在业务中做聚合。（真做了也过不了 Code Review）</p><p>尽管如此，数据库的成本也远高于服务器的成本。上云之后，拓展不是问题，剩下的只是钱的问题。</p><p><img src="https://www.infoworld.com/wp-content/uploads/2024/06/broken-chain_metal_link_breach_security-100777433-orig.jpg?resize=1024,683&quality=50&strip=all"></p><p><strong>2、<a href="https://www.joshwcomeau.com/css/custom-css-reset/">A Modern CSS Reset • Josh W. Comeau</a>[^3]</strong></p><p>标签：CSS,前端</p><p>这篇介绍了现代版本的 CSS reset。10 年前各个浏览器之间差异很大，开发时会用上一份 CSS reset 样式尽可能抹平这些差异。</p><p>比较经典的是 Eric Meyers 2011 年的版本，早年入坑的前端小伙伴可能都有点印象。 <a href="https://meyerweb.com/eric/tools/css/reset/">https://meyerweb.com/eric/tools/css/reset/</a></p><p>随着 IE 退场已经对 CSS 新特性的支持增加。如今的 CSS reset 内容要简洁许多。我现在主要做 Node.js 服务端开发，就不去逐条查看了。作者针对每一条都有说明，感兴趣的前端同学可以去看看。</p><p><img src="https://www.joshwcomeau.com/images/og-custom-css-reset.png"></p><hr><h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h2><ul><li>[1] Yazi: <a href="https://yazi-rs.github.io/">https://yazi-rs.github.io/</a></li><li>[2] Put business logic in the application, not the database: <a href="https://www.infoworld.com/article/2269523/put-business-logic-in-the-application-not-the-database.html">https://www.infoworld.com/article/2269523/put-business-logic-in-the-application-not-the-database.html</a></li><li>[3] A Modern CSS Reset • Josh W. Comeau: <a href="https://www.joshwcomeau.com/css/custom-css-reset/">https://www.joshwcomeau.com/css/custom-css-reset/</a></li><li>[4] ReadPo: <a href="https://readpo.com/zh/poster">https://readpo.com/zh/poster</a></li></ul>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>每周见闻分享：2025-01-26 - 2025-02-02</title>
     <link href="/weekly/2025/02/02/04-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250126_20250202/"/>
     <url>/weekly/2025/02/02/04-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250126_20250202/</url>
