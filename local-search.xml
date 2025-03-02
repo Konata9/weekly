@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>每周见闻分享：所有代码都是技术债</title>
+    <link href="/weekly/2025/03/02/08-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250223_20250302/"/>
+    <url>/weekly/2025/03/02/08-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250223_20250302/</url>
+    
+    <content type="html"><![CDATA[<p>每周见闻分享：2025-02-23 - 2025-03-02</p><h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p><img src="https://cdn.beekka.com/blogimg/asset/202403/bg2024030702.webp"></p><p>这周读完阮一峰老师的周刊，发现去年的这周标题是「所有代码都是技术债」，便再去阅读了一遍。</p><p>结合自己工作下来的感受，我觉得还能再加一个定语“所有需要维护的代码都是技术债”。</p><p>如果一段代码没人使用，或者只是一次性的，倒也无所谓。但需要维护的代码里，每一行可能都会变成未来的债务。漏洞的修复、功能的添加，没人知道昨天的代码会给今天带来的是坑还是洞。上一个人的”花活”会不会是下一个的“噩梦”。</p><p>所以我对自己的要求便是，在尽可能满足现有需求以及可读性的前提下，写最少的代码。适当地留出抽象的空间，反而能减轻日后的工作。有点像国画中的“留白”。</p><p>毕竟如果没有需求，就不用改动；反之结合新需求针对性地做抽象，也能控制修改的范围。我觉得合理的抽象也应该是能减少代码量的。任何会让现有代码量增加的重构，都要三思。</p><p>工程化、各种范式&#x2F;模式、规约；再到强类型语言、内存安全语言、代码格式化工具以及项目管理等，都是前辈们想出的解决技术债务的方法。</p><p>但就像熵的增加一定的，需要维护的代码也注定会越来越庞大。也难怪 Github 上没有一行代码的 nocode 项目拥有 61k 的 star 了。</p><p>或许真到了哪天 AI 全面编写代码，完全不需要人来检查的时候，这个问题才会被解决吧。</p><hr><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><p><strong>1、<a href="https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html">自顶向下方式深度解读 DeepSeek-R1，内含大量细节</a>[^1]</strong></p><p>标签：AI</p><p>一篇解读 DeepSeek R1 的技术文章。是作者阅读 DeepSeek 的 Paper 之后的提炼。介绍了技术原理和发展路线，不涉及具体的代码。</p><p>这周忙于处理底层框架替换的问题，只看了一个开头。之后有空了再来阅读。</p><p><img src="https://cfcdn.bruceyuan.com/blog/2025/deepseek-r1-reading-notes-20250216220356516.webp"></p><hr><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>1、<a href="https://paulbutler.org/2025/smuggling-arbitrary-data-through-an-emoji/">Smuggling arbitrary data through an emoji</a>[^2]</strong></p><p>标签：FUN</p><p>一篇利用 Unicode 的零宽字符在 Emoji 里“夹带私货”的文章。利用变体字符不会被解析显示且几乎能被复制下来的特性。</p><p>比如在 “g” 后面加上 U+FE01，即 “g\uFE01”。此时人只能看到字母”g”，但如果选中并且复制的话，则会把“g\uFE01”给复制下来。从而达到了“夹带私货”的目的。</p><p>这个特性能做什么呢？首先肯定能绕过人工审核；其次便是增加水印，进行数据追踪。</p><p><img src="https://paulbutler.org/2025/smuggling-arbitrary-data-through-an-emoji/tokenizer.png"></p><hr><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a href="https://qr.windliang.wang/">链图 - 链接转图片工具</a>[^3]</strong></p><p>标签：Tools</p><p>一个小工具，可以把连接地址转换为带有二维码的图片，很适合用于社交平台的分享，比如公众号等不能在正文中插入连接的情况。</p><p><img src="/weekly/images/2025/link-pic.png"></p><hr><h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h2><ul><li>[1] 自顶向下方式深度解读 DeepSeek-R1，内含大量细节: <a href="https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html">https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html</a></li><li>[2] Smuggling arbitrary data through an emoji: <a href="https://paulbutler.org/2025/smuggling-arbitrary-data-through-an-emoji/">https://paulbutler.org/2025/smuggling-arbitrary-data-through-an-emoji/</a></li><li>[3] 链图 - 链接转图片工具: <a href="https://qr.windliang.wang/">https://qr.windliang.wang/</a></li></ul>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>每周见闻分享：杂谈AI取代程序员</title>
     <link href="/weekly/2025/02/23/07-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250216_20250223/"/>
     <url>/weekly/2025/02/23/07-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250216_20250223/</url>
