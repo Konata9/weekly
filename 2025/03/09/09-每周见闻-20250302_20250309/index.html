@@ -21,27 +21,26 @@
   <meta name="author" content="Konata">
   <meta name="keywords" content="此方,Konata,Konata9,周刊,分享,记录,技术">
   
-    <meta name="description" content="每周见闻分享：2025-02-23 - 2025-03-02 思考 这周读完阮一峰老师的周刊，发现去年的这周标题是「所有代码都是技术债」，便再去阅读了一遍。 结合自己工作下来的感受，我觉得还能再加一个定语“所有需要维护的代码都是技术债”。 如果一段代码没人使用，或者只是一次性的，倒也无所谓。但需要维护的代码里，每一行可能都会变成未来的债务。漏洞的修复、功能的添加，没人知道昨天的代码会给今天带来的是">
+    <meta name="description" content="每周见闻：2025-03-02 - 2025-03-09  周刊：此方的手帐 - 周刊微信公众号：  思考AI 时代下，除了显卡，下一个吃紧的会不会是内存？ 对于使用 AI 的人来说，无论是本地模型还是 Agent 都是需要内存。有次在开了 4、5 个 Windsuf 后，我的 MBP（16 G）竟然跳出内存不够的警告。 打开 Activity Monitor 观察，只要 Windsuf 打开的时">
 <meta property="og:type" content="article">
-<meta property="og:title" content="每周见闻分享：所有代码都是技术债">
-<meta property="og:url" content="https://konata9.github.io/weekly/2025/03/02/08-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250223_20250302/index.html">
+<meta property="og:title" content="每周见闻：TypeScript 的类型系统可以运行毁灭战士">
+<meta property="og:url" content="https://konata9.github.io/weekly/2025/03/09/09-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250302_20250309/index.html">
 <meta property="og:site_name" content="此方的手帐">
-<meta property="og:description" content="每周见闻分享：2025-02-23 - 2025-03-02 思考 这周读完阮一峰老师的周刊，发现去年的这周标题是「所有代码都是技术债」，便再去阅读了一遍。 结合自己工作下来的感受，我觉得还能再加一个定语“所有需要维护的代码都是技术债”。 如果一段代码没人使用，或者只是一次性的，倒也无所谓。但需要维护的代码里，每一行可能都会变成未来的债务。漏洞的修复、功能的添加，没人知道昨天的代码会给今天带来的是">
+<meta property="og:description" content="每周见闻：2025-03-02 - 2025-03-09  周刊：此方的手帐 - 周刊微信公众号：  思考AI 时代下，除了显卡，下一个吃紧的会不会是内存？ 对于使用 AI 的人来说，无论是本地模型还是 Agent 都是需要内存。有次在开了 4、5 个 Windsuf 后，我的 MBP（16 G）竟然跳出内存不够的警告。 打开 Activity Monitor 观察，只要 Windsuf 打开的时">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.beekka.com/blogimg/asset/202403/bg2024030702.webp">
-<meta property="og:image" content="https://cfcdn.bruceyuan.com/blog/2025/deepseek-r1-reading-notes-20250216220356516.webp">
-<meta property="og:image" content="https://paulbutler.org/2025/smuggling-arbitrary-data-through-an-emoji/tokenizer.png">
-<meta property="og:image" content="https://konata9.github.io/weekly/images/2025/link-pic.png">
-<meta property="article:published_time" content="2025-03-02T14:18:46.000Z">
-<meta property="article:modified_time" content="2025-03-02T14:46:45.007Z">
+<meta property="og:image" content="https://cdn.sanity.io/images/cgdhsj6q/production/6ef017320c7bebf0c17e1ecf78c3e6fa5d6ae623-1792x1024.webp?w=1000&fit=max&auto=format">
+<meta property="og:image" content="https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2025/01/firefox-logo-at-the-center-with-fire-surrounding-the-image.jpg">
+<meta property="og:image" content="https://opengraph.githubassets.com/97d72df8b6f376507d1869968b22f1e7a3e81339374942fbc28872dcd0e4bd0c/hkdobrev/cleanmac">
+<meta property="article:published_time" content="2025-03-09T14:12:53.000Z">
+<meta property="article:modified_time" content="2025-03-09T14:44:04.689Z">
 <meta property="article:author" content="Konata">
 <meta property="article:tag" content="此方,Konata,Konata9,周刊,分享,记录,技术">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cdn.beekka.com/blogimg/asset/202403/bg2024030702.webp">
+<meta name="twitter:image" content="https://cdn.sanity.io/images/cgdhsj6q/production/6ef017320c7bebf0c17e1ecf78c3e6fa5d6ae623-1792x1024.webp?w=1000&fit=max&auto=format">
   
   
   
-  <title>每周见闻分享：所有代码都是技术债 - 此方的手帐</title>
+  <title>每周见闻：TypeScript 的类型系统可以运行毁灭战士 - 此方的手帐</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -215,7 +214,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="每周见闻分享：所有代码都是技术债"></span>
+            <span id="subtitle" data-typed-text="每周见闻：TypeScript 的类型系统可以运行毁灭战士"></span>
           
         </div>
 
@@ -226,8 +225,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-03-02 22:18" pubdate>
-          2025年3月2日 晚上
+        <time datetime="2025-03-09 22:12" pubdate>
+          2025年3月9日 晚上
         </time>
       </span>
     
@@ -238,7 +237,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          822 字
+          936 字
         
       </span>
     
@@ -249,7 +248,7 @@
         
         
         
-          10 分钟
+          11 分钟
         
       </span>
     
@@ -286,44 +285,55 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">每周见闻分享：所有代码都是技术债</h1>
+            <h1 id="seo-header">每周见闻：TypeScript 的类型系统可以运行毁灭战士</h1>
             
             
               <div class="markdown-body">
                 
-                <p>每周见闻分享：2025-02-23 - 2025-03-02</p>
-<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p><img src="https://cdn.beekka.com/blogimg/asset/202403/bg2024030702.webp" srcset="/weekly/img/loading.gif" lazyload></p>
-<p>这周读完阮一峰老师的周刊，发现去年的这周标题是「所有代码都是技术债」，便再去阅读了一遍。</p>
-<p>结合自己工作下来的感受，我觉得还能再加一个定语“所有需要维护的代码都是技术债”。</p>
-<p>如果一段代码没人使用，或者只是一次性的，倒也无所谓。但需要维护的代码里，每一行可能都会变成未来的债务。漏洞的修复、功能的添加，没人知道昨天的代码会给今天带来的是坑还是洞。上一个人的”花活”会不会是下一个的“噩梦”。</p>
-<p>所以我对自己的要求便是，在尽可能满足现有需求以及可读性的前提下，写最少的代码。适当地留出抽象的空间，反而能减轻日后的工作。有点像国画中的“留白”。</p>
-<p>毕竟如果没有需求，就不用改动；反之结合新需求针对性地做抽象，也能控制修改的范围。我觉得合理的抽象也应该是能减少代码量的。任何会让现有代码量增加的重构，都要三思。</p>
-<p>工程化、各种范式&#x2F;模式、规约；再到强类型语言、内存安全语言、代码格式化工具以及项目管理等，都是前辈们想出的解决技术债务的方法。</p>
-<p>但就像熵的增加一定的，需要维护的代码也注定会越来越庞大。也难怪 Github 上没有一行代码的 nocode 项目拥有 61k 的 star 了。</p>
-<p>或许真到了哪天 AI 全面编写代码，完全不需要人来检查的时候，这个问题才会被解决吧。</p>
+                <p>每周见闻：2025-03-02 - 2025-03-09</p>
+<blockquote>
+<p>周刊：<a href="https://konata9.github.io/weekly/">此方的手帐 - 周刊</a><br>微信公众号：</p>
+</blockquote>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>AI 时代下，除了显卡，下一个吃紧的会不会是内存？</p>
+<p>对于使用 AI 的人来说，无论是本地模型还是 Agent 都是需要内存。有次在开了 4、5 个 Windsuf 后，我的 MBP（16 G）竟然跳出内存不够的警告。</p>
+<p>打开 Activity Monitor 观察，只要 Windsuf 打开的时间一长。内存使用就直接翻黄。别提还有 Chrome、Teams 等其他“大户”。没想到有一天能在 Mac 上体验到卡顿。</p>
+<p>再者苹果的笔记本也同意 16 G 内存起步，这次新款 Air 还支持到了 32 G 内存。可想随着今后的发展，各个软件对内存的需求只会越来越高。下次再有换电脑的需求时，可能得考虑内存的容量了。</p>
+<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://socket.dev/blog/typescript-types-running-doom">TypeScript 的类型系统可以运行毁灭战士</a>[^1]</strong></p>
+<p>标签：TypeScript,FUN</p>
+<p>是的，你并没有看错。一位国外的大神使用 TypeScript（修改后的版本） 的<strong>类型系统</strong>成功运行了经典游戏 DOOM（毁灭战士）。为了做到这一点，他构建了一整套在 TypeScript 类型系统内的计算机系统，包括：</p>
+<ol>
+<li>RAM</li>
+<li>磁盘系统</li>
+<li>调用栈</li>
+<li>子程序</li>
+<li>内存指针</li>
+<li>执行上下文</li>
+</ol>
+<p>活脱脱地手搓了一个系统，一些类型定义的文件更是多大了十多万行。作者修改了 TS 的各种限制，以支持各种超乎寻常的情况。</p>
+<p>并且由于数量庞大，每次运行都要消耗 100G 内存。同时没有 IDE 能支持如此庞大的文件量；甚至连错误信息都只有内存溢出，完完全全的开发噩梦。</p>
+<p>在如此严苛的条件下，作者坚持一年终于完成。为了渲染游戏的第一帧，项目需要在 12 天内处理 177 TB TypeScript 类型定义。</p>
+<p>文章主要介绍了工作过程与难点，并且有一个简单的介绍视频。不得不说真的太牛了。这简直是体操中的体操了。</p>
+<p>之前在看“神光”大神的 TS 类型体操的小册里，就有提到<br> TypeScript 的类型系统是图灵完备的，也就是能描述各种可计算逻辑。简单点来理解就是循环、条件等各种 JS 里面有的语法它都有，JS 能写的逻辑它都能写。</p>
+<p>看来真的是一点都不假。</p>
+<p><img src="https://cdn.sanity.io/images/cgdhsj6q/production/6ef017320c7bebf0c17e1ecf78c3e6fa5d6ae623-1792x1024.webp?w=1000&fit=max&auto=format" srcset="/weekly/img/loading.gif" lazyload></p>
 <hr>
-<h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html">自顶向下方式深度解读 DeepSeek-R1，内含大量细节</a>[^1]</strong></p>
-<p>标签：AI</p>
-<p>一篇解读 DeepSeek R1 的技术文章。是作者阅读 DeepSeek 的 Paper 之后的提炼。介绍了技术原理和发展路线，不涉及具体的代码。</p>
-<p>这周忙于处理底层框架替换的问题，只看了一个开头。之后有空了再来阅读。</p>
-<p><img src="https://cfcdn.bruceyuan.com/blog/2025/deepseek-r1-reading-notes-20250216220356516.webp" srcset="/weekly/img/loading.gif" lazyload></p>
-<hr>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://paulbutler.org/2025/smuggling-arbitrary-data-through-an-emoji/">Smuggling arbitrary data through an emoji</a>[^2]</strong></p>
-<p>标签：FUN</p>
-<p>一篇利用 Unicode 的零宽字符在 Emoji 里“夹带私货”的文章。利用变体字符不会被解析显示且几乎能被复制下来的特性。</p>
-<p>比如在 “g” 后面加上 U+FE01，即 “g\uFE01”。此时人只能看到字母”g”，但如果选中并且复制的话，则会把“g\uFE01”给复制下来。从而达到了“夹带私货”的目的。</p>
-<p>这个特性能做什么呢？首先肯定能绕过人工审核；其次便是增加水印，进行数据追踪。</p>
-<p><img src="https://paulbutler.org/2025/smuggling-arbitrary-data-through-an-emoji/tokenizer.png" srcset="/weekly/img/loading.gif" lazyload></p>
-<hr>
-<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://qr.windliang.wang/">链图 - 链接转图片工具</a>[^3]</strong></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://www.howtogeek.com/why-i-switched-to-firefox-and-never-looked-back/">为什么我切换到Firefox并从此不再回头</a>[^2]</strong></p>
 <p>标签：Tools</p>
-<p>一个小工具，可以把连接地址转换为带有二维码的图片，很适合用于社交平台的分享，比如公众号等不能在正文中插入连接的情况。</p>
-<p><img src="/weekly/images/2025/link-pic.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<p>本文介绍了作者在旧电脑上的 Chrome 占用太多内存，从而用回 FireFox 的原因。在 Chrome 上能做的事，FireFox 也都能做，并且在多标签的情况下内存占用更少。并且在标签管理上也比 Chrome 更为友好。</p>
+<p>最近我也面临内存的问题，也打算切换一下试试。</p>
+<p><img src="https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2025/01/firefox-logo-at-the-center-with-fire-surrounding-the-image.jpg" srcset="/weekly/img/loading.gif" lazyload></p>
+<hr>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://github.com/hkdobrev/cleanmac">GitHub - hkdobrev&#x2F;cleanmac: 用脚本清理你的macOS，无需昂贵的应用</a>[^3]</strong></p>
+<p>标签：Tools</p>
+<p>一个清理 Mac 系统的脚本，用来释放磁盘空间、内存等。<br>主要清除了系统日志、brew 的安装包、npm 依赖、不用的 docker 镜像。</p>
+<p>在公司的电脑上试着跑了一下，因为东西太多，还挺花时间的。</p>
+<p>类似的应用有 CleanMyMac、腾讯的 Lemon 等，都挺好用的。</p>
+<p><img src="https://opengraph.githubassets.com/97d72df8b6f376507d1869968b22f1e7a3e81339374942fbc28872dcd0e4bd0c/hkdobrev/cleanmac" srcset="/weekly/img/loading.gif" lazyload></p>
 <hr>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h2><ul>
-<li>[1] 自顶向下方式深度解读 DeepSeek-R1，内含大量细节: <a target="_blank" rel="noopener" href="https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html">https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html</a></li>
-<li>[2] Smuggling arbitrary data through an emoji: <a target="_blank" rel="noopener" href="https://paulbutler.org/2025/smuggling-arbitrary-data-through-an-emoji/">https://paulbutler.org/2025/smuggling-arbitrary-data-through-an-emoji/</a></li>
-<li>[3] 链图 - 链接转图片工具: <a target="_blank" rel="noopener" href="https://qr.windliang.wang/">https://qr.windliang.wang/</a></li>
+<li>[1] 密歇根TypeScript创始人成功在类型系统内运行毁灭战士游戏…: <a target="_blank" rel="noopener" href="https://socket.dev/blog/typescript-types-running-doom">https://socket.dev/blog/typescript-types-running-doom</a></li>
+<li>[2] 为什么我切换到Firefox并从此不再回头: <a target="_blank" rel="noopener" href="https://www.howtogeek.com/why-i-switched-to-firefox-and-never-looked-back/">https://www.howtogeek.com/why-i-switched-to-firefox-and-never-looked-back/</a></li>
+<li>[3] GitHub - hkdobrev&#x2F;cleanmac: 用脚本清理你的macOS，无需昂贵的应用: <a target="_blank" rel="noopener" href="https://github.com/hkdobrev/cleanmac">https://github.com/hkdobrev/cleanmac</a></li>
 </ul>
 
                 
@@ -342,8 +352,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>每周见闻分享：所有代码都是技术债</div>
-      <div>https://konata9.github.io/weekly/2025/03/02/08-每周见闻-20250223_20250302/</div>
+      <div>每周见闻：TypeScript 的类型系统可以运行毁灭战士</div>
+      <div>https://konata9.github.io/weekly/2025/03/09/09-每周见闻-20250302_20250309/</div>
     </div>
     <div class="license-meta">
       
@@ -355,7 +365,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年3月2日</div>
+          <div>2025年3月9日</div>
         </div>
       
       
@@ -399,18 +409,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/weekly/2025/03/09/09-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250302_20250309/" title="每周见闻：TypeScript 的类型系统可以运行毁灭战士">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">每周见闻：TypeScript 的类型系统可以运行毁灭战士</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/weekly/2025/02/23/07-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250216_20250223/" title="每周见闻分享：杂谈AI取代程序员">
-                        <span class="hidden-mobile">每周见闻分享：杂谈AI取代程序员</span>
+                      <a href="/weekly/2025/03/02/08-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250223_20250302/" title="每周见闻分享：所有代码都是技术债">
+                        <span class="hidden-mobile">每周见闻分享：所有代码都是技术债</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
