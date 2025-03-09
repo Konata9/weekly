@@ -104,7 +104,7 @@ const processPage = (page) => {
 
 const generateMarkdown = (pages, today, startDay) => {
   const mid = `${startDay}_${today}`.replace(/-/g, '');
-  const mdHead = `---\ntitle: 每周见闻分享：${startDay} - ${today}\ndate: ${moment().format('YYYY-MM-DD HH:mm:ss')}\ntoc: true\n---\n\n每周见闻分享：${startDay} - ${today}\n\n`;
+  const mdHead = `---\ntitle: 每周见闻：${startDay} - ${today}\ndate: ${moment().format('YYYY-MM-DD HH:mm:ss')}\ntoc: true\n---\n\n每周见闻：${startDay} - ${today}\n\n`;
 
   const secData = {};
   const footnotes = []
