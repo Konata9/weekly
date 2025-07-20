@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>每周见闻（26）：写了一篇小说《最后的重构》</title>
+    <link href="/weekly/2025/07/20/26-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250713_20250720/"/>
+    <url>/weekly/2025/07/20/26-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250713_20250720/</url>
+    
+    <content type="html"><![CDATA[<p>每周见闻：2025-07-13 - 2025-07-20</p><h2 id="头条：小说《最后的重构》"><a href="#头条：小说《最后的重构》" class="headerlink" title="头条：小说《最后的重构》"></a>头条：小说《最后的重构》</h2><p>有关注公众号的朋友可能发现，最近我写了一篇小说《最后的重构》。以虚构的方式，展现了老中青三代程序员在 AI 冲击下的生存与挣扎。一共四章，这周就会完结。前三章可以在这里查看：</p><ul><li><a href="https://mp.weixin.qq.com/s/CtYmK_XOOfebvjzaRslOng">最后的重构 第一章：胜利的代价</a></li><li><a href="https://mp.weixin.qq.com/s/rhPVvrXsbkE4el7lqA5rZA">最后的重构 第二章：破局之路</a></li><li><a href="https://mp.weixin.qq.com/s/JbFfik58oOt_n1EIXc1Lbg">最后的重构 第三章：与AI共舞</a></li></ul><p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/the-last-refactor.jpeg"></p><h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p><strong>1、<a href="https://evertpot.com/http/">Series of posts on HTTP status codes</a>[^1]</strong></p><p>标签：Coding</p><p>记录了 68 个官方的 HTTP 状态码以及其应用场景。如果对返回值状态码语义化有要求的小伙伴，可以看一看了解一下。</p><p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/http-status-code.png"></p><p><strong>2、<a href="https://www.youtube.com/watch?v=TYsPrXWgNS8">The untold story of JavaScript - YouTube - Deno</a>[^3]</strong></p><p>标签：JavaScript</p><p>8 分钟的视频回顾了 JavaScript 从最早作为浏览器中的表单验证工具，进化到全栈语言的变迁史。除了 jQuery、Vue、React 等前端框架，服务端 Node.js 和 Deno 外。当然，也少不了和 Oracle 的商标之争。</p><p><img src="https://i.ytimg.com/vi/TYsPrXWgNS8/maxresdefault.jpg"></p><hr><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a href="https://github.com/sky22333/hubproxy">sky22333&#x2F;hubproxy: 基于Go的自托管轻量级、高性能的多功能代理加速服务，提供 Docker 镜像加速、GitHub 加速、下载离线镜像等功能。单域名实现所有功能，支持仓库审计。流式转发，无缓存。</a>[^2]</strong></p><p>标签：Tools</p><p>基于 Go 写的自托管的 Docker 镜像、Github 加速服务，对上网条件不方便的小伙伴很有帮助。</p><p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/hubproxy.png"></p><hr><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>1、<a href="https://www.v2ex.com/t/1136194">跑了一晚上京东外卖，记录一下 - V2EX</a>[^4]</strong></p><p>标签：Life</p><p>京东入局外卖后，小哥记录了跑京东外卖的体验。比较真实，一些感受如下：</p><ul><li>严格遵守交通规则，很可能导致超时。</li><li>推测仅靠同时接一单的模式，难以维持骑手生计。</li></ul><p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/jd-waimai-experience.png"></p><hr><h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><p><strong>1、<a href="https://opencode.ai/">opencode</a>[^5]</strong></p><p>标签：Tools,AI</p><p>为终端环境打造的 AI Code Agent，类似是开源版本的 Claude Code，支持超过 75 个在 Models.dev 上的大模型。不过有 Cursor 或 Trae 的话也能在其终端实现类似任务。</p><p><img src="https://opencode.ai/_astro/screenshot-splash.Br7Db4P4_ZUNKo1.webp"></p><hr><h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h2><ul><li>[1] Series of posts on HTTP status codes: <a href="https://evertpot.com/http/">https://evertpot.com/http/</a></li><li>[2] sky22333&#x2F;hubproxy: 基于Go的自托管轻量级、高性能的多功能代理加速服务，提供 Docker 镜像加速、GitHub 加速、下载离线镜像等功能。单域名实现所有功能，支持仓库审计。流式转发，无缓存。: <a href="https://github.com/sky22333/hubproxy">https://github.com/sky22333/hubproxy</a></li><li>[3] The untold story of JavaScript - YouTube - Deno: <a href="https://www.youtube.com/watch?v=TYsPrXWgNS8">https://www.youtube.com/watch?v=TYsPrXWgNS8</a></li><li>[4] 跑了一晚上京东外卖，记录一下 - V2EX: <a href="https://www.v2ex.com/t/1136194">https://www.v2ex.com/t/1136194</a></li><li>[5] opencode: <a href="https://opencode.ai/">https://opencode.ai/</a></li></ul>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>每周见闻（25）：拥抱 AI，静观其变</title>
     <link href="/weekly/2025/07/13/25-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250706_20250713/"/>
     <url>/weekly/2025/07/13/25-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250706_20250713/</url>
