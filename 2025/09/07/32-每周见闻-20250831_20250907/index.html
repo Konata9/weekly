@@ -21,27 +21,29 @@
   <meta name="author" content="Konata">
   <meta name="keywords" content="此方,Konata,Konata9,周刊,分享,记录,技术">
   
-    <meta name="description" content="每周见闻：2025-08-17 - 2025-08-24 思考降本是近两年来的趋势，记得年头大厂们的 P0 事件被调侃“降本增笑”，而现在我们也因为成本控制搞得有些神经紧绷。 有时候我会思考，降本到底是降什么呢？如果是优化不合理的使用方式或者不合理的架构设计，那确实是非常有益且能提升效率的。但如果仅仅只是为了账单好看，把三方服务都变为自托管，那背后的维护、二次开发成本不见得会减少，效率也不见得能提">
+    <meta name="description" content="每周见闻：2025-08-31 - 2025-09-07 这周终于能抽出点时间了，这次会多放两篇弥补一下上周的停更。 思考：人生最好的架构，是为自己而设计某个深夜，在完成一次的码重构后，我靠在椅子上，忽然有了一个想法：我们如此痴迷于为软件寻找最佳架构，那我们的人生呢？我们是否也应该成为自己人生的首席架构师？这个想法最终促成了这篇文章，希望能与每一个在世界里探索的你，共同思考。 人生最好的架构，是为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="每周见闻（31）：降本到底增不增效？">
-<meta property="og:url" content="https://konata9.github.io/weekly/2025/08/24/31-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250817_20250824/index.html">
+<meta property="og:title" content="每周见闻(32)：人生最好的架构，是为自己而设计">
+<meta property="og:url" content="https://konata9.github.io/weekly/2025/09/07/32-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250831_20250907/index.html">
 <meta property="og:site_name" content="此方的手帐">
-<meta property="og:description" content="每周见闻：2025-08-17 - 2025-08-24 思考降本是近两年来的趋势，记得年头大厂们的 P0 事件被调侃“降本增笑”，而现在我们也因为成本控制搞得有些神经紧绷。 有时候我会思考，降本到底是降什么呢？如果是优化不合理的使用方式或者不合理的架构设计，那确实是非常有益且能提升效率的。但如果仅仅只是为了账单好看，把三方服务都变为自托管，那背后的维护、二次开发成本不见得会减少，效率也不见得能提">
+<meta property="og:description" content="每周见闻：2025-08-31 - 2025-09-07 这周终于能抽出点时间了，这次会多放两篇弥补一下上周的停更。 思考：人生最好的架构，是为自己而设计某个深夜，在完成一次的码重构后，我靠在椅子上，忽然有了一个想法：我们如此痴迷于为软件寻找最佳架构，那我们的人生呢？我们是否也应该成为自己人生的首席架构师？这个想法最终促成了这篇文章，希望能与每一个在世界里探索的你，共同思考。 人生最好的架构，是为">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/fire-37-year.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/60s-api.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/xdg.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/sys-design.png">
-<meta property="article:published_time" content="2025-08-24T14:50:11.000Z">
-<meta property="article:modified_time" content="2025-08-24T15:23:09.190Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/girl-with-protect.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/aws-iot-core-base.png">
+<meta property="og:image" content="https://static.ops-coffee.com/static/images/2025/0814.01.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509072211217.png">
+<meta property="og:image" content="https://www.dougmacdowell.com/images/coffeematic-pc-lineage-major-tech-events-doug-macdowell.jpeg">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509072216179.png">
+<meta property="article:published_time" content="2025-09-07T14:02:48.000Z">
+<meta property="article:modified_time" content="2025-09-07T15:09:17.783Z">
 <meta property="article:author" content="Konata">
 <meta property="article:tag" content="此方,Konata,Konata9,周刊,分享,记录,技术">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/fire-37-year.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/girl-with-protect.png">
   
   
   
-  <title>每周见闻（31）：降本到底增不增效？ - 此方的手帐</title>
+  <title>每周见闻(32)：人生最好的架构，是为自己而设计 - 此方的手帐</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -215,7 +217,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="每周见闻（31）：降本到底增不增效？"></span>
+            <span id="subtitle" data-typed-text="每周见闻(32)：人生最好的架构，是为自己而设计"></span>
           
         </div>
 
@@ -226,8 +228,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-24 22:50" pubdate>
-          2025年8月24日 晚上
+        <time datetime="2025-09-07 22:02" pubdate>
+          2025年9月7日 晚上
         </time>
       </span>
     
@@ -238,7 +240,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          1.1k 字
         
       </span>
     
@@ -249,7 +251,7 @@
         
         
         
-          15 分钟
+          13 分钟
         
       </span>
     
@@ -286,58 +288,60 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">每周见闻（31）：降本到底增不增效？</h1>
+            <h1 id="seo-header">每周见闻(32)：人生最好的架构，是为自己而设计</h1>
             
             
               <div class="markdown-body">
                 
-                <p>每周见闻：2025-08-17 - 2025-08-24</p>
-<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>降本是近两年来的趋势，记得年头大厂们的 P0 事件被调侃“降本增笑”，而现在我们也因为成本控制搞得有些神经紧绷。</p>
-<p>有时候我会思考，降本到底是降什么呢？如果是优化不合理的使用方式或者不合理的架构设计，那确实是非常有益且能提升效率的。但如果仅仅只是为了账单好看，把三方服务都变为自托管，那背后的维护、二次开发成本不见得会减少，效率也不见得能提升。万一中间出现偏差（排期、开发难度等），可能就是一地鸡毛。</p>
-<p>当年某滴当时升级 K8S 时详尽分析了两个方案，一个是原地升级，一个是替换升级。安全性上明显更好的替换升级被否，采用了成本上更经济的原地升级方案。后面的结果大家都知道了。</p>
-<p>愿所有在做降本的朋友，都不会碰上糟心事。</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://yfzz.net/?p=89">37岁退休一周年：经验与心得分享 | YFZZ</a>[^1]</strong></p>
-<p>标签：Life,思考</p>
-<p>这篇博客讲述了作者 FIRE 生活一周年的心得和感受，写了很多细节。包括前期的规划、心理建设、FIRE 后的生活。</p>
-<ul>
-<li>经济规划上：尽量减少重大“变量”（如结婚生子、买房买车，家人病重……），尽早规划好大额支出。同时做好支出预算，调整自己的消费比例。核心就是“开源节流”再配合副业辅助。</li>
-<li>心理建设上：FIRE 是像着心中的方向迁徙，而不是逃离某个地方。</li>
-</ul>
-<p>特别是心理建设的部分写得很棒，从 FIRE 的目的到 FIRE 后的转变和可能的困境都进行了分析。对 FIRE 感兴趣的朋友强烈建议看下作者原文。</p>
-<blockquote>
-<p>FIRE从来不是结束，而是一种自由人生的开始！<br>能够开心的过完这一生，本身就是最珍贵的意义。</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/fire-37-year.png" srcset="/weekly/img/loading.gif" lazyload></p>
-<p><strong>2、<a target="_blank" rel="noopener" href="https://manateelazycat.github.io/2025/08/22/how-ceo-work/">一个 CEO 的一天是怎么度过的？</a>[^4]</strong></p>
+                <p>每周见闻：2025-08-31 - 2025-09-07</p>
+<p>这周终于能抽出点时间了，这次会多放两篇弥补一下上周的停更。</p>
+<h2 id="思考：人生最好的架构，是为自己而设计"><a href="#思考：人生最好的架构，是为自己而设计" class="headerlink" title="思考：人生最好的架构，是为自己而设计"></a>思考：人生最好的架构，是为自己而设计</h2><p>某个深夜，在完成一次的码重构后，我靠在椅子上，忽然有了一个想法：我们如此痴迷于为软件寻找最佳架构，那我们的人生呢？我们是否也应该成为自己人生的首席架构师？这个想法最终促成了这篇文章，希望能与每一个在世界里探索的你，共同思考。</p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/_8rMqhlzuz_ffylf8Pz-6A?poc_token=HMebvWij_O5H52eeoNEdMHlj5p7FgE42IiA7dLau">人生最好的架构，是为自己而设计</a></p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/girl-with-protect.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<h2 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h2><p>**1. <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/3wyrIFf3pQh5EJ0NWbHOjA">从 HTTP 轮询到 MQTT：我们在 AWS IoT Core 上的架构演进与实战复盘</a></p>
+<p>标签：架构</p>
+<p>下半年在做 AWS IoT Core 的 Cost Down 任务。因为当时我参与的架构设计，在复盘的时候又梳理了一遍架构。</p>
+<p>借此机会正好分享一下，我们利用 AWS IoT Core 实现的 MQTT 架构。</p>
+<p>这篇主要介绍了设计思路和 POC 的架构。下一篇将会结合实际场景，修改架构和成本优化策略。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/aws-iot-core-base.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://blog.ops-coffee.com/r/2025-summer-coastal-road-trip-day4-quanzhou-xijie.html">久违的暑假｜沿海自驾DAY4 - 泉州</a>[^1]</strong></p>
 <p>标签：Life</p>
-<p>王总的 CEO 的一天生活，感觉拍成“自律 CEO 的一天” 这种短视频应该会很有意思。排得满满当当却又有一种井井有条的感觉。一天 1 公里游泳 + 4 公里散步真的太厉害了。</p>
+<p>免费拼图工具作者 37丫37 的自驾日记，从上海出发一路南下。每到一处就会留下一篇游记，作者不会可以追求网红景点，随性且真实。一路追下来，就当自己也云旅游了一趟。</p>
+<p><img src="https://static.ops-coffee.com/static/images/2025/0814.01.jpg" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>2、<a target="_blank" rel="noopener" href="https://manateelazycat.github.io/2025/08/27/keep-stupid/">Stay Foolish</a>[^2]</strong></p>
+<p>标签：自律,思考</p>
+<p>“保持愚钝” 王总很直白的感悟，话糙理不糙。里面有两句特别认同：</p>
+<blockquote>
+<p>把自己诚心诚意当做傻逼，就是那种99.999% 的纯傻逼<br>成长从不内耗自己开始</p>
+</blockquote>
+<p>遇到的人和事越多，就越觉得人外有人。知道的越多，就知道自己不知道的更多。坦然承认自己不知道既是勇气也是智慧。</p>
+<p><strong>3、<a target="_blank" rel="noopener" href="https://sspai.com/post/101882">经历分享 | 打工人留学的现实成本与结局 - 少数派</a>[^4]</strong></p>
+<p>标签：Life,工作</p>
+<p>打工人留学欧洲两年的分享。在我的概念里，留学一般是学生时代（末期）做的事情。一旦工作，就与这些无缘了。一直很好奇工作后留学是怎样的一种状态和感受。</p>
+<p>作者工作 6 年后，参加了一个为期两年的硕士联合项目，期间花费近 30w 人民币（学费+生活支出）。最终毕业后在芬兰收获 offer，结束了漫长的求职之路。</p>
+<p>作者着重分享了留学生活的设想与现实，并对陷入低谷时给出了建议。</p>
+<blockquote>
+<p>这里我想对即将也面对求职的应届生或者不如意事业的人，提供一个小建议，无论如何，请努力去相信自己，如果当下的一刻你觉得自己很差劲，但是请始终相信你不会一直停留在这个水平；你如果已经快要完全失去信心，请去做当下力所能及的事情。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509072211217.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>4、<a target="_blank" rel="noopener" href="https://www.dougmacdowell.com/coffeematic-pc.html">Coffeematic PC – Coffee Maker Computer by Doug MacDowell</a>[^5]</strong></p>
+<p>标签：FUN</p>
+<p>一位国外的大佬用 1980 年的咖啡机 + 现代硬件组装成了一台咖啡机电脑，并且完整地保留了各自的功能（打游戏 + 做咖啡）。最精妙的是真的实现了用 Java（咖啡）来冷却 Java（程序）。作者放了一部分制作视频在油管上，感兴趣的朋友可以去原文看一下。</p>
+<p>作者最后介绍了咖啡机电脑的历史，第一台咖啡机电脑是 2002 年，中间有 15 年的停滞，后于 2018 年又有人再次尝试。下面是作者整理的时间轴，停滞的 15 年发生了许多事情。</p>
+<p><img src="https://www.dougmacdowell.com/images/coffeematic-pc-lineage-major-tech-events-doug-macdowell.jpeg" srcset="/weekly/img/loading.gif" lazyload></p>
 <hr>
-<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://github.com/vikiboss/60s">vikiboss&#x2F;60s: ⏰ 60s API，每天 60 秒看世界、在线翻译、Epic 免费游戏、哪吒 2 票房、KFC 疯狂星期四｜一系列 高质量、开源、可靠、全球 CDN 加速 的开放 API 集合，支持 Docker &#x2F; Deno &#x2F; Bun &#x2F; Cloudflare Workers &#x2F; Node.js 部署</a>[^2]</strong></p>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://docker.aityp.com/">渡渡鸟镜像同步站</a>[^3]</strong></p>
 <p>标签：Tools</p>
-<p>一个收集了一系列高质量免费的 API 项目，托管在 Deno Deploy 上。从最初的 60s 资讯到后面的天气、汇率等包含了很多 API。</p>
-<p>作者也是一个爱折腾的程序员，在他的博客中讲述了这个项目的起源 <a target="_blank" rel="noopener" href="https://xlog.viki.moe/60s">https://xlog.viki.moe/60s</a></p>
-<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/60s-api.png" srcset="/weekly/img/loading.gif" lazyload></p>
-<hr>
-<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://sspai.com/post/101780">码农的自我修养之保持干净的 $HOME 目录 - 少数派</a>[^3]</strong></p>
-<p>标签：Shell</p>
-<p>作者介绍了通过设置环境变量让遵循 XDG_Base_Directory 规则的应用可以把 cache 等文件放到指定目录下，从而让 $HOME 目录保持整洁。Github 上有一个 xdg-ninja 的工具可以帮助检测可以移动的文件并给出详细的提示。</p>
-<p>虽然我没有作者那样的洁癖，不过学到了一个新的知识 XDG_Base_Directory。对有文件洁癖的朋友来说会很有帮助。</p>
-<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/xdg.png" srcset="/weekly/img/loading.gif" lazyload></p>
-<p><strong>2、<a target="_blank" rel="noopener" href="https://www.seangoedecke.com/good-system-design/">Everything I know about good system design</a>[^5]</strong></p>
-<p>标签：架构,思考</p>
-<p>一位 Github 的工程师谈论的良好系统设计，仔细看下来其中几部分说的很有道理：</p>
-<p> 系统设计的原语是应用服务器、数据库、缓存、队列、事件总线、代理等。<br>类比装修的话，系统设计注重房间的布局、管线的走向、厨房卫生间的位置布局。而软件设计则像是厨房里橱柜的位置、水斗的高度更为细节。</p>
-<p> 你应该尽量减少任何系统中的有状态组件。<br>状态这个东西你不能没有，但要尽量减少。或者丢到共有的部分（Redis、数据库）成为一个全局状态。我工作中的一个服务是状态服务，在扩容、代码修改上着实让人头疼。</p>
-<p>总的看下来系统设计都是在权衡，在状态和无状态之间、缓存方式之间、日志记录的详细程度之间等。那些万能公式，也需要根据实际情况来进行权衡。</p>
-<p>这篇也是阮一峰老师周刊的头条，老师的总结也非常到位。</p>
-<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/sys-design.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<p>一个 Docker 镜像同步网站，速度很快。自带了命令，可以一键复制直接使用，极大地加快了效率。</p>
+<p>如果没有“魔法”的加持，拉取 Docker 镜像会是一场艰苦的战斗。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509072216179.png" srcset="/weekly/img/loading.gif" lazyload></p>
 <hr>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h2><ul>
-<li>[1] 37岁退休一周年：经验与心得分享 | YFZZ: <a target="_blank" rel="noopener" href="https://yfzz.net/?p=89">https://yfzz.net/?p=89</a></li>
-<li>[2] vikiboss&#x2F;60s: ⏰ 60s API，每天 60 秒看世界、在线翻译、Epic 免费游戏、哪吒 2 票房、KFC 疯狂星期四｜一系列 高质量、开源、可靠、全球 CDN 加速 的开放 API 集合，支持 Docker &#x2F; Deno &#x2F; Bun &#x2F; Cloudflare Workers &#x2F; Node.js 部署: <a target="_blank" rel="noopener" href="https://github.com/vikiboss/60s">https://github.com/vikiboss/60s</a></li>
-<li>[3] 码农的自我修养之保持干净的 $HOME 目录 - 少数派: <a target="_blank" rel="noopener" href="https://sspai.com/post/101780">https://sspai.com/post/101780</a></li>
-<li>[4] 一个 CEO 的一天是怎么度过的？: <a target="_blank" rel="noopener" href="https://manateelazycat.github.io/2025/08/22/how-ceo-work/">https://manateelazycat.github.io/2025/08/22/how-ceo-work/</a></li>
-<li>[5] Everything I know about good system design: <a target="_blank" rel="noopener" href="https://www.seangoedecke.com/good-system-design/">https://www.seangoedecke.com/good-system-design/</a></li>
+<li>[1] 久违的暑假｜沿海自驾DAY4 - 泉州: <a target="_blank" rel="noopener" href="https://blog.ops-coffee.com/r/2025-summer-coastal-road-trip-day4-quanzhou-xijie.html">https://blog.ops-coffee.com/r/2025-summer-coastal-road-trip-day4-quanzhou-xijie.html</a></li>
+<li>[2] Stay Foolish: <a target="_blank" rel="noopener" href="https://manateelazycat.github.io/2025/08/27/keep-stupid/">https://manateelazycat.github.io/2025/08/27/keep-stupid/</a></li>
+<li>[3] 渡渡鸟镜像同步站: <a target="_blank" rel="noopener" href="https://docker.aityp.com/">https://docker.aityp.com/</a></li>
+<li>[4] 经历分享 | 打工人留学的现实成本与结局 - 少数派: <a target="_blank" rel="noopener" href="https://sspai.com/post/101882">https://sspai.com/post/101882</a></li>
+<li>[5] Coffeematic PC – Coffee Maker Computer by Doug MacDowell: <a target="_blank" rel="noopener" href="https://www.dougmacdowell.com/coffeematic-pc.html">https://www.dougmacdowell.com/coffeematic-pc.html</a></li>
 </ul>
 
                 
@@ -356,8 +360,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>每周见闻（31）：降本到底增不增效？</div>
-      <div>https://konata9.github.io/weekly/2025/08/24/31-每周见闻-20250817_20250824/</div>
+      <div>每周见闻(32)：人生最好的架构，是为自己而设计</div>
+      <div>https://konata9.github.io/weekly/2025/09/07/32-每周见闻-20250831_20250907/</div>
     </div>
     <div class="license-meta">
       
@@ -369,7 +373,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月24日</div>
+          <div>2025年9月7日</div>
         </div>
       
       
@@ -413,18 +417,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/weekly/2025/09/07/32-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250831_20250907/" title="每周见闻(32)：人生最好的架构，是为自己而设计">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">每周见闻(32)：人生最好的架构，是为自己而设计</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/weekly/2025/08/17/30-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250810_20250817/" title="每周见闻(30)：运气不好的一周">
-                        <span class="hidden-mobile">每周见闻(30)：运气不好的一周</span>
+                      <a href="/weekly/2025/08/24/31-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250817_20250824/" title="每周见闻（31）：降本到底增不增效？">
+                        <span class="hidden-mobile">每周见闻（31）：降本到底增不增效？</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
