@@ -21,28 +21,27 @@
   <meta name="author" content="Konata">
   <meta name="keywords" content="此方,Konata,Konata9,周刊,分享,记录,技术">
   
-    <meta name="description" content="每周见闻：2025-09-14 - 2025-09-21 AWS 成本优化实践下半年主要针对 AWS IoT Core 做了成本优化。以前主要关注技术本身而忽略了成本问题，在这次的优化过程中学习到了不少知识。在生产设备数量不停增加的情况下，完成了近 40% 的成本优化。 下面是针对这次优化过程的一个输出：   从 HTTP 轮询到 MQTT：我们在 AWS IoT Core 上的架构演进与实战复盘">
+    <meta name="description" content="每周见闻：2025-09-21 - 2025-09-28 “每条规则的背后都是一条血的教训”。很耳熟的一句话，但只有实际经历过，才会有深刻的理解。 这周闹了个生产事故，造成了生产环境上不小的影响。也连累同事跟着一起加班，很不是滋味。 搞开发出 BUG 不是什么稀罕事，所以才更要重视从开发到上线的每一个环节。尊重每一个步骤，才能尽可能避免生产事故的发生。 工具1、边缘全栈开发平台 - EdgeOne">
 <meta property="og:type" content="article">
-<meta property="og:title" content="每周见闻（34）：AWS 成本优化实践与数字游民一日体验">
-<meta property="og:url" content="https://konata9.github.io/weekly/2025/09/21/34-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250914_20250921/index.html">
+<meta property="og:title" content="每周见闻(35)：每条规则的背后都是一条血的教训">
+<meta property="og:url" content="https://konata9.github.io/weekly/2025/09/28/35-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250921_20250928/index.html">
 <meta property="og:site_name" content="此方的手帐">
-<meta property="og:description" content="每周见闻：2025-09-14 - 2025-09-21 AWS 成本优化实践下半年主要针对 AWS IoT Core 做了成本优化。以前主要关注技术本身而忽略了成本问题，在这次的优化过程中学习到了不少知识。在生产设备数量不停增加的情况下，完成了近 40% 的成本优化。 下面是针对这次优化过程的一个输出：   从 HTTP 轮询到 MQTT：我们在 AWS IoT Core 上的架构演进与实战复盘">
+<meta property="og:description" content="每周见闻：2025-09-21 - 2025-09-28 “每条规则的背后都是一条血的教训”。很耳熟的一句话，但只有实际经历过，才会有深刻的理解。 这周闹了个生产事故，造成了生产环境上不小的影响。也连累同事跟着一起加班，很不是滋味。 搞开发出 BUG 不是什么稀罕事，所以才更要重视从开发到上线的每一个环节。尊重每一个步骤，才能尽可能避免生产事故的发生。 工具1、边缘全栈开发平台 - EdgeOne">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://opengraph.githubassets.com/00546492a414dfa319367ae06ed1aa10eb3f74cfee5bc0cafd2f58760a215ed1/xuf-95/digital-nomad">
-<meta property="og:image" content="https://surveyjs.io/Content/Images/V2/index-page/logo.png">
-<meta property="og:image" content="https://imagedelivery.net/iHX6Ovru0O7AjmyT5yZRoA/062dfce1-0be9-498a-6ce3-99a2f9892900/public">
-<meta property="og:image" content="https://cdn.sanity.io/images/cgdhsj6q/production/3740dba254a802cbd91562cb1a87b1215b2fea8c-3398x1324.png?w=1000&q=95&fit=max&auto=format">
-<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509212230755.png">
-<meta property="article:published_time" content="2025-09-21T05:41:22.000Z">
-<meta property="article:modified_time" content="2025-09-21T14:56:04.697Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509282213753.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509282213449.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509282214870.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509282214166.png">
+<meta property="article:published_time" content="2025-09-28T14:11:35.000Z">
+<meta property="article:modified_time" content="2025-09-28T14:31:05.542Z">
 <meta property="article:author" content="Konata">
 <meta property="article:tag" content="此方,Konata,Konata9,周刊,分享,记录,技术">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://opengraph.githubassets.com/00546492a414dfa319367ae06ed1aa10eb3f74cfee5bc0cafd2f58760a215ed1/xuf-95/digital-nomad">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509282213753.png">
   
   
   
-  <title>每周见闻（34）：AWS 成本优化实践与数字游民一日体验 - 此方的手帐</title>
+  <title>每周见闻(35)：每条规则的背后都是一条血的教训 - 此方的手帐</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -216,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="每周见闻（34）：AWS 成本优化实践与数字游民一日体验"></span>
+            <span id="subtitle" data-typed-text="每周见闻(35)：每条规则的背后都是一条血的教训"></span>
           
         </div>
 
@@ -227,8 +226,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-09-21 13:41" pubdate>
-          2025年9月21日 下午
+        <time datetime="2025-09-28 22:11" pubdate>
+          2025年9月28日 晚上
         </time>
       </span>
     
@@ -239,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          656 字
         
       </span>
     
@@ -250,7 +249,7 @@
         
         
         
-          15 分钟
+          8 分钟
         
       </span>
     
@@ -287,74 +286,51 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">每周见闻（34）：AWS 成本优化实践与数字游民一日体验</h1>
+            <h1 id="seo-header">每周见闻(35)：每条规则的背后都是一条血的教训</h1>
             
             
               <div class="markdown-body">
                 
-                <p>每周见闻：2025-09-14 - 2025-09-21</p>
-<h2 id="AWS-成本优化实践"><a href="#AWS-成本优化实践" class="headerlink" title="AWS 成本优化实践"></a>AWS 成本优化实践</h2><p>下半年主要针对 AWS IoT Core 做了成本优化。以前主要关注技术本身而忽略了成本问题，在这次的优化过程中学习到了不少知识。在生产设备数量不停增加的情况下，完成了近 <strong>40%</strong> 的成本优化。</p>
-<p>下面是针对这次优化过程的一个输出：</p>
-<ul>
-<li><a href="https://konata9.github.io/article/bbcqgo9g/"> 从 HTTP 轮询到 MQTT：我们在 AWS IoT Core 上的架构演进与实战复盘 </a></li>
-<li><a href="https://konata9.github.io/article/0yx6lnd0/"> AWS IoT Core 成本优化实战：从 PoC 到生产的省钱之旅 </a></li>
-</ul>
-<p>AWS IoT Core 的优化告一段落。下一步将利用 CloudFront 减少流量费用。</p>
-<h2 id="数字游民一日体验"><a href="#数字游民一日体验" class="headerlink" title="数字游民一日体验"></a>数字游民一日体验</h2><p>上周末跟着稻草人的新路线，去了数字游民社区体验。亲眼见到了数字游民的生活以及听了他们真实的分享，打破了原来对数字游民的滤镜。</p>
-<p>打破滤镜并非坏事，能从另一面了解一个事物也非常有价值。如果你对数字游民也感兴趣，不妨看看我的游后感：</p>
-<ul>
-<li><a href="https://konata9.github.io/article/awhl9g7l/"> 数字游民的田园牧歌与残酷现实：来自计家墩的一日观察 </a></li>
-</ul>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://sspai.com/post/102148">长期主义懒人的减肥复盘：如何用生活化方式减重 50 斤 - 少数派</a>[^1]</strong></p>
-<p>标签：Life,自律</p>
-<p>每次看到相关的文章都会进去看看，人到中年减肥是关注的事情之一。懒人减肥法谁不爱呢？</p>
-<p>这篇作者介绍了自己的减肥经验，主要依靠轻断食 + 散步的方式。确实很符合懒人方式，最后的总结很实在，挑选一些我看了有感悟的条目：</p>
-<ol>
-<li>以健康为目标：减肥不是目的，而是健康生活的自然结果。</li>
-<li>顺应自己的特点：减肥方式不是千篇一律的，我认为每个人都可以根据自己的实际情况和偏好，选择具体的方式。</li>
-<li>循序渐进，得过且过：从始至终，不责怪自己，明天开始能做到，依然是好样的。</li>
-<li>照顾自己的情绪： 心理健康和身体健康是一体的。</li>
-<li>别考验自己的意志力：意志力是好钢，好钢需要用在刀刃上，天天用肯定会卷刃。</li>
-</ol>
-<p><strong>2、<a target="_blank" rel="noopener" href="https://github.com/xuf-95/digital-nomad">xuf-95&#x2F;digital-nomad: 数字游民部落</a>[^3]</strong></p>
-<p>标签：Life,副业</p>
-<p>上周参加了稻草人的数字游民体验一日游后，打破了不少滤镜也获得了不少知识。</p>
-<p>在整理游后感的过程中，发现了这个项目。汇总了数字游民相关的资料，包括国内和东南亚的几大社区、媒体、线上工作渠道等。不妨作为一个了解数字游民的渠道之一。</p>
-<p><img src="https://opengraph.githubassets.com/00546492a414dfa319367ae06ed1aa10eb3f74cfee5bc0cafd2f58760a215ed1/xuf-95/digital-nomad" srcset="/weekly/img/loading.gif" lazyload></p>
-<hr>
-<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://surveyjs.io/">SurveyJS - JavaScript Libraries for Surveys and Forms</a>[^2]</strong></p>
+                <p>每周见闻：2025-09-21 - 2025-09-28</p>
+<p>“每条规则的背后都是一条血的教训”。很耳熟的一句话，但只有实际经历过，才会有深刻的理解。</p>
+<p>这周闹了个生产事故，造成了生产环境上不小的影响。也连累同事跟着一起加班，很不是滋味。</p>
+<p>搞开发出 BUG 不是什么稀罕事，所以才更要重视从开发到上线的每一个环节。尊重每一个步骤，才能尽可能避免生产事故的发生。</p>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://pages.edgeone.ai/zh">边缘全栈开发平台 - EdgeOne Pages</a>[^1]</strong></p>
 <p>标签：Tools</p>
-<p>一个用来设计调查问卷和表单的 JS 库。代码开源在 Github 上，有开发能力的可以直接使用进行开发。如果还需要后台服务像 Dashboard、低代码、统计等，则有不同的定价标准，面向企业用户。</p>
-<p><img src="https://surveyjs.io/Content/Images/V2/index-page/logo.png" srcset="/weekly/img/loading.gif" lazyload></p>
-<p><strong>2、<a target="_blank" rel="noopener" href="https://blog.val.town/gardening-dependencies">How to keep package.json under control</a>[^4]</strong></p>
-<p>标签：Node.js</p>
-<p>作者分享了管理 <code>package.json</code> 的方法论。鉴于这两周 NPM 供应链攻击事件以及 <code>node_modules</code> 天然的“黑洞”特性，还是可以了解一下的。</p>
-<p>作者主要介绍了下面几种方法，分别是：</p>
-<ol>
-<li>查看 <code>package.json</code> 和 <code>package-lock.json</code> 文件下的依赖。特别是 <code>package-lock.json</code> 文件，或许可以借助现在 AI 来帮忙进行分析和梳理出一些不必要的包。</li>
-<li>对于非常小的依赖（50 行左右的），与其装一个包不如去复制源代码（注意 License）。</li>
-<li>集成 Renovate 持续对依赖进行更新，尽量不留特别老旧的版本。</li>
-</ol>
-<p><img src="https://imagedelivery.net/iHX6Ovru0O7AjmyT5yZRoA/062dfce1-0be9-498a-6ce3-99a2f9892900/public" srcset="/weekly/img/loading.gif" lazyload></p>
-<p><strong>3、<a target="_blank" rel="noopener" href="https://socket.dev/blog/ongoing-supply-chain-attack-targets-crowdstrike-npm-packages">Updated and Ongoing Supply Chain Attack Targets CrowdStrike …</a>[^5]</strong></p>
-<p>标签：Node.js,JavaScript</p>
-<p>上周 NPM 供应链攻击后续，大规模的供应链攻击还在继续。这次 CrowdStrike 相关的依赖受到了攻击，攻击者利用 postinstall 执行恶意脚本会搜集主机中的密钥、CI、Github Action 工作流然后将敏感数据上传到特定的端口。</p>
-<p>攻击者还做了 7 个版本的攻击代码，因此这一次影响的范围非常巨大。现在已确认的共有 <strong>526</strong> 个包受影响。<br>可以在原文中找到。</p>
-<p>看了一下很多包都是其他包的依赖。由于藏的深，对大部分开发者来说可能一不留神就要中招了。</p>
-<p><img src="https://cdn.sanity.io/images/cgdhsj6q/production/3740dba254a802cbd91562cb1a87b1215b2fea8c-3398x1324.png?w=1000&q=95&fit=max&auto=format" srcset="/weekly/img/loading.gif" lazyload></p>
+<p>腾讯提供的边缘全栈开发平台，类似 Cloudflare。现在处于 Beta 阶段，所有功能全部免费。有兴趣的小伙伴可以去注册一个薅一下羊毛。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509282213753.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>2、<a target="_blank" rel="noopener" href="https://github.com/theopfr/somo">theopfr&#x2F;somo: A human-friendly alternative to netstat for socket and port monitoring on Linux.</a>[^3]</strong></p>
+<p>标签：Tools</p>
+<p>一个 Rust 编写的对人友好的端口查看工具，<code>lsof</code> 的升级版，支持 Linux 和 Mac。表格形式确实看着很舒服，速度也非常快。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509282213449.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>3、<a target="_blank" rel="noopener" href="https://www.iamsajid.com/colors/">Color Generator</a>[^4]</strong></p>
+<p>标签：Tools</p>
+<p>一个工具网站，提供了网站的主色调的搭配。选择合适的主色就能生成其他 4 种颜色对应的 CSS 并同时支持深色模式。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509282214870.png" srcset="/weekly/img/loading.gif" lazyload></p>
 <hr>
-<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://github.com/ayangweb/Awesome-BongoCat?tab=readme-ov-file">ayangweb&#x2F;Awesome-BongoCat: 🚀 汇聚优质的第三方 BongoCat 模型！</a>[^6]</strong></p>
-<p>标签：FUN,Rust</p>
-<p>5 月的<a href="https://konata9.github.io/weekly/2025/05/11/17-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250504_20250511/">每周见闻：BongoCat 可爱的桌面宠物</a>中介绍了一个可爱的桌面宠物——BongoCat，现在支持了自定义模型。目前在 Github 仓库中已有 20 多个模型。其中不乏原神，果然二次元才是生产力。顺带一提，我从猫猫换成了小熊猫。</p>
-<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509212230755.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://leftoversalad.com/c/015_programmingpeople/">语言拟人</a>[^2]</strong></p>
+<p>标签：FUN</p>
+<p>各种编程语言的拟人画。一本正经的 Rust、抽象的 Assembly、还有 JavaScript 这个缝合怪看着还怪可爱的。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509282214166.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<hr>
+<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://github.com/bodadotsh/npm-security-best-practices">GitHub - bodadotsh&#x2F;npm-security-best-practices: How to stay safe from NPM supply chain attacks</a>[^5]</strong></p>
+<p>标签：Node.js,Security</p>
+<p>鉴于近期发生的 NPM 包”投毒“事件，这篇文章分别从开发者、包维护者和其他事项三个方面列出了最佳事件。开发者方面列举了下面 6 条：</p>
+<ol>
+<li>固定版本号：使用  –save-exact 来固定版本号（没有 ^ 或者 ～，是确定的版本）</li>
+<li>引入 lockfiles ：这个应该bu mo s</li>
+<li>禁用 lifecycle 脚本：如 preinstall, postinstall 这类安装后自动执行的脚本（最近的一次攻击就是利用 preinstall 执行脚本）</li>
+<li>设置最小发布时间：当最新的版本发布后，可以设置 set minimumReleaseAge 来延迟更新，推迟引入错误的时机。</li>
+<li>设置权限模型：在最新的 Node LTS 版本中可以设置包的访问权限。</li>
+<li>减少外部依赖：比如 fetch 代替 axios 等。现在 Node.js 的功能也渐渐增强了，一些基础依赖确实可以用原生代替。</li>
+</ol>
 <hr>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h2><ul>
-<li>[1] 长期主义懒人的减肥复盘：如何用生活化方式减重 50 斤 - 少数派: <a target="_blank" rel="noopener" href="https://sspai.com/post/102148">https://sspai.com/post/102148</a></li>
-<li>[2] SurveyJS - JavaScript Libraries for Surveys and Forms: <a target="_blank" rel="noopener" href="https://surveyjs.io/">https://surveyjs.io/</a></li>
-<li>[3] xuf-95&#x2F;digital-nomad: 数字游民部落: <a target="_blank" rel="noopener" href="https://github.com/xuf-95/digital-nomad">https://github.com/xuf-95/digital-nomad</a></li>
-<li>[4] How to keep package.json under control: <a target="_blank" rel="noopener" href="https://blog.val.town/gardening-dependencies">https://blog.val.town/gardening-dependencies</a></li>
-<li>[5] Updated and Ongoing Supply Chain Attack Targets CrowdStrike …: <a target="_blank" rel="noopener" href="https://socket.dev/blog/ongoing-supply-chain-attack-targets-crowdstrike-npm-packages">https://socket.dev/blog/ongoing-supply-chain-attack-targets-crowdstrike-npm-packages</a></li>
-<li>[6] ayangweb&#x2F;Awesome-BongoCat: 🚀 汇聚优质的第三方 BongoCat 模型！: <a target="_blank" rel="noopener" href="https://github.com/ayangweb/Awesome-BongoCat?tab=readme-ov-file">https://github.com/ayangweb/Awesome-BongoCat?tab=readme-ov-file</a></li>
+<li>[1] 边缘全栈开发平台 - EdgeOne Pages: <a target="_blank" rel="noopener" href="https://pages.edgeone.ai/zh">https://pages.edgeone.ai/zh</a></li>
+<li>[2] 语言拟人: <a target="_blank" rel="noopener" href="https://leftoversalad.com/c/015_programmingpeople/">https://leftoversalad.com/c/015_programmingpeople/</a></li>
+<li>[3] theopfr&#x2F;somo: A human-friendly alternative to netstat for socket and port monitoring on Linux.: <a target="_blank" rel="noopener" href="https://github.com/theopfr/somo">https://github.com/theopfr/somo</a></li>
+<li>[4] Color Generator: <a target="_blank" rel="noopener" href="https://www.iamsajid.com/colors/">https://www.iamsajid.com/colors/</a></li>
+<li>[5] GitHub - bodadotsh&#x2F;npm-security-best-practices: How to stay safe from NPM supply chain attacks: <a target="_blank" rel="noopener" href="https://github.com/bodadotsh/npm-security-best-practices">https://github.com/bodadotsh/npm-security-best-practices</a></li>
 </ul>
 
                 
@@ -373,8 +349,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>每周见闻（34）：AWS 成本优化实践与数字游民一日体验</div>
-      <div>https://konata9.github.io/weekly/2025/09/21/34-每周见闻-20250914_20250921/</div>
+      <div>每周见闻(35)：每条规则的背后都是一条血的教训</div>
+      <div>https://konata9.github.io/weekly/2025/09/28/35-每周见闻-20250921_20250928/</div>
     </div>
     <div class="license-meta">
       
@@ -386,7 +362,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年9月21日</div>
+          <div>2025年9月28日</div>
         </div>
       
       
@@ -430,18 +406,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/weekly/2025/09/28/35-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250921_20250928/" title="每周见闻(35)：每条规则的背后都是一条血的教训">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">每周见闻(35)：每条规则的背后都是一条血的教训</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/weekly/2025/09/14/33-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250907_20250914/" title="每周见闻（33）：用 AI 拥抱的自己梦想">
-                        <span class="hidden-mobile">每周见闻（33）：用 AI 拥抱的自己梦想</span>
+                      <a href="/weekly/2025/09/21/34-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250914_20250921/" title="每周见闻（34）：AWS 成本优化实践与数字游民一日体验">
+                        <span class="hidden-mobile">每周见闻（34）：AWS 成本优化实践与数字游民一日体验</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
