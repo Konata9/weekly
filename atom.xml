@@ -6,7 +6,7 @@
   <link href="https://konata9.github.io/weekly/atom.xml" rel="self"/>
   
   <link href="https://konata9.github.io/weekly/"/>
-  <updated>2025-09-28T14:31:05.542Z</updated>
+  <updated>2025-10-06T12:36:10.733Z</updated>
   <id>https://konata9.github.io/weekly/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每周见闻(36)：Node.js 其实也有多线程</title>
+    <link href="https://konata9.github.io/weekly/2025/10/06/36-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250929_20251006/"/>
+    <id>https://konata9.github.io/weekly/2025/10/06/36-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250929_20251006/</id>
+    <published>2025-10-06T11:57:27.000Z</published>
+    <updated>2025-10-06T12:36:10.733Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;每周见闻：2025-09-28 - 2025-10-05&lt;/p&gt;
+&lt;p&gt;假期前三天还在处理之前生产事故，这次真是血的教训。等事情告一段落之后，再来好好复盘一下。&lt;/p&gt;
+&lt;p&gt;后面两天稍微能休息一下了，就把之前收藏的技术博客好好读了读。因为目前主要以 Node.js</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>每周见闻(35)：每条规则的背后都是一条血的教训</title>
@@ -428,29 +451,6 @@
         
     <summary type="html">&lt;p&gt;每周见闻：2025-05-04 - 2025-05-11&lt;/p&gt;
 &lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;p&gt;这周&lt;a</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>每周见闻：MCP 管理工具来了！</title>
-    <link href="https://konata9.github.io/weekly/2025/04/27/16-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250420_20250427/"/>
-    <id>https://konata9.github.io/weekly/2025/04/27/16-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250420_20250427/</id>
-    <published>2025-04-27T15:16:36.000Z</published>
-    <updated>2025-04-27T15:24:09.802Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;每周见闻：2025-04-20 - 2025-04-27&lt;/p&gt;
-&lt;p&gt;祝各位五一节快乐，在这个属于劳动者的节日里好好放松一下吧。&lt;/p&gt;
-&lt;h2 id=&quot;Coding&quot;&gt;&lt;a href=&quot;#Coding&quot; class=&quot;headerlink&quot;</summary>
         
       
     
