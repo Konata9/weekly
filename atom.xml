@@ -6,7 +6,7 @@
   <link href="https://konata9.github.io/weekly/atom.xml" rel="self"/>
   
   <link href="https://konata9.github.io/weekly/"/>
-  <updated>2025-10-06T12:38:11.776Z</updated>
+  <updated>2025-10-12T06:20:50.906Z</updated>
   <id>https://konata9.github.io/weekly/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每周见闻：真遇到了“一行代码”造成的 Bug 了</title>
+    <link href="https://konata9.github.io/weekly/2025/10/12/37-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20251005_20251012/"/>
+    <id>https://konata9.github.io/weekly/2025/10/12/37-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20251005_20251012/</id>
+    <published>2025-10-12T05:21:56.000Z</published>
+    <updated>2025-10-12T06:20:50.906Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;每周见闻：2025-10-05 - 2025-10-12&lt;/p&gt;
+&lt;h2 id=&quot;一行代码造成的-Bug&quot;&gt;&lt;a href=&quot;#一行代码造成的-Bug&quot; class=&quot;headerlink&quot; title=&quot;一行代码造成的 Bug&quot;&gt;&lt;/a&gt;一行代码造成的</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>每周见闻(36)：Node.js 其实也有多线程</title>
@@ -63,7 +85,7 @@
     <link href="https://konata9.github.io/weekly/2025/09/21/34-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250914_20250921/"/>
     <id>https://konata9.github.io/weekly/2025/09/21/34-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250914_20250921/</id>
     <published>2025-09-21T05:41:22.000Z</published>
-    <updated>2025-09-21T14:56:04.697Z</updated>
+    <updated>2025-10-12T06:22:24.428Z</updated>
     
     
       
@@ -427,28 +449,6 @@
         
     <summary type="html">&lt;p&gt;每周见闻：2025-05-11 - 2025-05-18&lt;/p&gt;
 &lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;p&gt;这周阮一峰老师的&lt;a</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>每周见闻：BongoCat 可爱的桌面宠物</title>
-    <link href="https://konata9.github.io/weekly/2025/05/11/17-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250504_20250511/"/>
-    <id>https://konata9.github.io/weekly/2025/05/11/17-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250504_20250511/</id>
-    <published>2025-05-11T14:25:10.000Z</published>
-    <updated>2025-05-11T15:49:12.306Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;每周见闻：2025-05-04 - 2025-05-11&lt;/p&gt;
-&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;p&gt;这周&lt;a</summary>
         
       
     

@@ -21,27 +21,30 @@
   <meta name="author" content="Konata">
   <meta name="keywords" content="此方,Konata,Konata9,周刊,分享,记录,技术">
   
-    <meta name="description" content="每周见闻：2025-09-07 - 2025-09-14 相信每个人都会有一些因各种原因而被搁置起来的梦想，随着时间的流逝成为一丝遗憾。 我自己的话是画画和吉他。但在 AI 的帮助下，我似乎有了一个重新“体验”这些梦想的机会。 AI 确实降低了许多技能的门槛：不会画画的我，可以通过提示词一窥创意的乐趣；不会弹吉他的我，也能在 AI 的辅助下完成一首简单的弹唱。 我很清楚，这种“捷径”无法替代通过时">
+    <meta name="description" content="每周见闻：2025-10-05 - 2025-10-12 一行代码造成的 Bug之前遇到的“一行代码造成的 Bug”。框框一顿调查后，发现就是 PO 的需求。 觉得很有意思，就记录一下：谁动了我的数据？一个 Bug 背后的“一行代码”真凶 如果单元测试能更完善一点，这个问题可能会在更早的阶段就暴露了。  Coding1、15 Recent Node.js Features that Replace">
 <meta property="og:type" content="article">
-<meta property="og:title" content="每周见闻（33）：用 AI 拥抱的自己梦想">
-<meta property="og:url" content="https://konata9.github.io/weekly/2025/09/14/33-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250907_20250914/index.html">
+<meta property="og:title" content="每周见闻：真遇到了“一行代码”造成的 Bug 了">
+<meta property="og:url" content="https://konata9.github.io/weekly/2025/10/12/37-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20251005_20251012/index.html">
 <meta property="og:site_name" content="此方的手帐">
-<meta property="og:description" content="每周见闻：2025-09-07 - 2025-09-14 相信每个人都会有一些因各种原因而被搁置起来的梦想，随着时间的流逝成为一丝遗憾。 我自己的话是画画和吉他。但在 AI 的帮助下，我似乎有了一个重新“体验”这些梦想的机会。 AI 确实降低了许多技能的门槛：不会画画的我，可以通过提示词一窥创意的乐趣；不会弹吉他的我，也能在 AI 的辅助下完成一首简单的弹唱。 我很清楚，这种“捷径”无法替代通过时">
+<meta property="og:description" content="每周见闻：2025-10-05 - 2025-10-12 一行代码造成的 Bug之前遇到的“一行代码造成的 Bug”。框框一顿调查后，发现就是 PO 的需求。 觉得很有意思，就记录一下：谁动了我的数据？一个 Bug 背后的“一行代码”真凶 如果单元测试能更完善一点，这个问题可能会在更早的阶段就暴露了。  Coding1、15 Recent Node.js Features that Replace">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509142327563.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/free-for-dev.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/lazy-typer.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/musspark.png">
-<meta property="article:published_time" content="2025-09-14T14:36:34.000Z">
-<meta property="article:modified_time" content="2025-09-14T15:28:20.714Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510071549352.png">
+<meta property="og:image" content="https://images.ctfassets.net/hspc7zpa5cvq/6F0nBbgh1IqDHIKbZzwqhs/9c248deadad6ee386909e92203f4556f/15_Features.png">
+<meta property="og:image" content="https://repository-images.githubusercontent.com/1068329305/d834eb95-ee0e-4b65-9b48-45f24be6fce8">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510121328008.jpg">
+<meta property="og:image" content="https://github.com/looplj/axonhub/raw/unstable/docs/axonhub-architecture-light.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510121330325.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510121332570.png">
+<meta property="article:published_time" content="2025-10-12T05:21:56.000Z">
+<meta property="article:modified_time" content="2025-10-12T06:20:50.906Z">
 <meta property="article:author" content="Konata">
 <meta property="article:tag" content="此方,Konata,Konata9,周刊,分享,记录,技术">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509142327563.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510071549352.png">
   
   
   
-  <title>每周见闻（33）：用 AI 拥抱的自己梦想 - 此方的手帐</title>
+  <title>每周见闻：真遇到了“一行代码”造成的 Bug 了 - 此方的手帐</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -215,7 +218,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="每周见闻（33）：用 AI 拥抱的自己梦想"></span>
+            <span id="subtitle" data-typed-text="每周见闻：真遇到了“一行代码”造成的 Bug 了"></span>
           
         </div>
 
@@ -226,8 +229,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-09-14 22:36" pubdate>
-          2025年9月14日 晚上
+        <time datetime="2025-10-12 13:21" pubdate>
+          2025年10月12日 下午
         </time>
       </span>
     
@@ -238,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          1.2k 字
         
       </span>
     
@@ -249,7 +252,7 @@
         
         
         
-          13 分钟
+          14 分钟
         
       </span>
     
@@ -286,50 +289,124 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">每周见闻（33）：用 AI 拥抱的自己梦想</h1>
+            <h1 id="seo-header">每周见闻：真遇到了“一行代码”造成的 Bug 了</h1>
             
             
               <div class="markdown-body">
                 
-                <p>每周见闻：2025-09-07 - 2025-09-14</p>
-<p>相信每个人都会有一些因各种原因而被搁置起来的梦想，随着时间的流逝成为一丝遗憾。</p>
-<p>我自己的话是画画和吉他。但在 AI 的帮助下，我似乎有了一个重新“体验”这些梦想的机会。</p>
-<p>AI 确实降低了许多技能的门槛：不会画画的我，可以通过提示词一窥创意的乐趣；不会弹吉他的我，也能在 AI 的辅助下完成一首简单的弹唱。</p>
-<p>我很清楚，这种“捷径”无法替代通过时间与汗水换来的真正技艺，它更像是一种浅尝辄止的慰藉，让我们能够短暂地触碰到昔日的梦想。但有时，这样一份片刻的满足感，也足以弥补当年的一些遗憾了。</p>
-<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202509142327563.png" srcset="/weekly/img/loading.gif" lazyload></p>
-<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://free-for.dev/#/?id=table-of-contents">Free for Developers</a>[^1]</strong></p>
-<p>标签：Tools</p>
-<p>一个整理了一系列与开发者相关的免费服务的网站。几乎囊括了整个开发的周期，从云服务、CI&#x2F;CD 等内容非常多。该项目公 1600+ 开发者共同维护这个列表，对于想做 Demo 但想减少成本的同学会有所帮助。</p>
-<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/free-for-dev.png" srcset="/weekly/img/loading.gif" lazyload></p>
-<p><strong>2、<a target="_blank" rel="noopener" href="https://lazytyper.com/zh">LazyTyper官网 - 免费精准的Whisper语音输入，支持中英日韩等多语言混输</a>[^5]</strong></p>
-<p>标签：Tools</p>
-<p>一款利用 AI 的语音输入法，适配了豆包、ElevenLabs 等多种模型来处理不同场景的需求。对于有写博客需求的同学能节省不少时间。软件不带 API Key 需要自己准备对应模型的 Key。火山引擎有 20 小时免费的时长，感觉我可以用很久。</p>
-<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/lazy-typer.png" srcset="/weekly/img/loading.gif" lazyload></p>
+                <p>每周见闻：2025-10-05 - 2025-10-12</p>
+<h2 id="一行代码造成的-Bug"><a href="#一行代码造成的-Bug" class="headerlink" title="一行代码造成的 Bug"></a>一行代码造成的 Bug</h2><p>之前遇到的“一行代码造成的 Bug”。框框一顿调查后，发现就是 PO 的需求。</p>
+<p>觉得很有意思，就记录一下：<br><a href="https://konata9.github.io/article/q0kuswk4/">谁动了我的数据？一个 Bug 背后的“一行代码”真凶</a></p>
+<p>如果单元测试能更完善一点，这个问题可能会在更早的阶段就暴露了。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510071549352.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://nodesource.com/blog/nodejs-features-replacing-npm-packages">15 Recent Node.js Features that Replace Popular npm Packages</a>[^1]</strong></p>
+<p>标签：Node.js,Security</p>
+<p>15 个可以被 Node.js 最新特性替换的 npm 包。由于此前 NPM 上的”投毒“事件，使用 Node.js 的核心库会更加安全，项目体积也能更小一些。</p>
+<p>其中有一些还处于实验阶段，以下功能在 <code>LTS</code> 版本已处于稳定阶段：</p>
+<ol>
+<li><code>fetch() →  node-fetch</code> ：Node 18+</li>
+<li><code>node:test → 测试框架(mocha, jest  等)</code>：Node 20+ </li>
+<li><code>util.styleText() → chalk / kleur</code> ：Node 22+ （有点太新了，<code>chalk</code> 是之前被”投毒“ 的依赖）</li>
+<li><code>util.stripVTControlCharacters() → ansi-colors / strip-ansi</code> ：原生但使用场景不多</li>
+<li><code>fs.glob() → glob</code> ：Node 22+ </li>
+<li><code>fs.rm(&#123; recursive: true &#125;) → rimraf</code>：Node 18+</li>
+<li><code>fs.mkdir(&#123; recursive: true &#125;) → mkdirp</code> ：Node 10+ (加入以来就是稳定阶段）</li>
+<li><code>crypto.randomUUID() → uuid (v4)</code>：Node 17+ (加入以来就是稳定阶段）</li>
+<li><code>Buffer, atob, btoa → base64-js / atob polyfills</code>：Node 20+</li>
+<li><code>EventTarget → event-target-shim</code> ：Node 15+</li>
+</ol>
+<p><img src="https://images.ctfassets.net/hspc7zpa5cvq/6F0nBbgh1IqDHIKbZzwqhs/9c248deadad6ee386909e92203f4556f/15_Features.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>2、<a target="_blank" rel="noopener" href="https://github.com/lirantal/npm-security-best-practices?tab=readme-ov-file#7-no-plaintext-secrets-in-env-files">lirantal&#x2F;npm-security-best-practices: Collection of npm package manager Security Best Practices</a>[^2]</strong></p>
+<p>标签：Node.js,Security</p>
+<p>另一篇关于 NPM 的最佳安全实践。这篇集中列举了 12 条，与<a href="https://konata9.github.io/weekly/2025/09/28/35-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250921_20250928/">上周的那篇</a>略有不同主要偏重在开发者视角。</p>
+<p>两篇都提到的部分有：</p>
+<ol>
+<li>禁用 LifeCycle 命令（如 <code>postinstall</code> 等）</li>
+<li>设置一个冷静期（在新版本发布后多少天再更新）</li>
+<li>减少依赖数量（如使用原生方法代替三方依赖）</li>
+<li>启用 lockfile（如 <code>package-lock.json</code>）</li>
+</ol>
+<p><img src="https://repository-images.githubusercontent.com/1068329305/d834eb95-ee0e-4b65-9b48-45f24be6fce8" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>3、<a target="_blank" rel="noopener" href="https://allthingssmitty.com/2025/10/06/grouping-arrays-in-modern-javascript-object-groupby-and-map-groupby/">How to group arrays in JavaScript without reduce() - Matt Smith</a>[^3]</strong></p>
+<p>标签：Node.js,JavaScript</p>
+<p>JavaScript 提供的 <code>Object.groupBy()</code> 和 <code>Map.groupBy()</code> 两个新方法 。<br><code>Object.groupBy()</code> 类似 lodash 中的方法，可以对数组进行分类，返回 JS 对象；而 <code>Map.groupBy()</code> 则返回的是一个 Map 对象，并保持插入顺序。具体的差别可以见下表：</p>
+<table>
+<thead>
+<tr>
+<th>Use case</th>
+<th>Object.groupBy()</th>
+<th>Map.groupBy()</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>String keys only</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Non-string keys (numbers, objects)</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>JSON serialization</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Preserving insertion order</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Iteration with .entries()</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Simplicity and readability</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody></table>
+<p>这两个 API 比较新 Node 需要 21+。因此暂时还得继续使用用 <code>lodash</code> 或者 <code>reduce</code>。</p>
+<p><strong>4、<a target="_blank" rel="noopener" href="https://www.alexmolas.com/2025/07/28/unexpected-benefit-llm.html">Who needs git when you have 1M context windows?</a>[^7]</strong></p>
+<p>标签：AI,Coding,思考</p>
+<p>与之前 AI “删库跑路“ 的事件相反，这一次 AI 帮助作者恢复的代码。</p>
+<p>起因是作者优化了模型，将指标提供 5%。然而在经过代码优化后，反而下降了 2%。由于作者没有进行过 commit 并没有办法回滚代码。在多次尝试无果后，最终利用 Gimini 2.5-pro 1M 上下文的窗口还原出了最初的代码。</p>
+<p>当然，作者说的如果有一个能记住一切 LLM 就不需要 Git 最佳实践，我并不认同。</p>
 <hr>
-<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://socket.dev/blog/npm-author-qix-compromised-in-major-supply-chain-attack">npm Author Qix Compromised via Phishing Email in Major Suppl…</a>[^2]</strong></p>
-<p>标签：JavaScript,Node.js</p>
-<p>本周大事件，npm 作者 Qix 被钓鱼，导致严重的 npm 生态链攻击。攻击者在许多基础的库中植入恶意代码，对浏览器请求进行劫持，将任何加密交易替换为自己的地址，将任何货币重定向到他们的账户。</p>
-<p>受影响的是非常基础的包如 chalk, debug 等，通常每周会收到 2-3 亿次下载也经常作为其他依赖的依赖库使用。因此这次的攻击影响和范围非常巨大。Node 开发同学尤其需要注意。</p>
-<p>下面是确认受到攻击的版本：</p>
-<p>• <a href="mailto:&#x62;&#x61;&#99;&#107;&#115;&#x6c;&#x61;&#115;&#104;&#x40;&#48;&#x2e;&#50;&#x2e;&#49;">backslash@0.2.1</a><br>• <a href="mailto:&#x63;&#x68;&#x61;&#108;&#x6b;&#x40;&#53;&#x2e;&#x36;&#46;&#x31;">chalk@5.6.1</a><br>• <a href="mailto:&#99;&#104;&#97;&#x6c;&#107;&#x2d;&#116;&#x65;&#109;&#x70;&#108;&#x61;&#116;&#101;&#x40;&#49;&#46;&#x31;&#46;&#49;">chalk-template@1.1.1</a><br>• <a href="mailto:&#99;&#111;&#x6c;&#x6f;&#114;&#45;&#x63;&#x6f;&#x6e;&#x76;&#101;&#114;&#x74;&#64;&#51;&#46;&#x31;&#46;&#49;">color-convert@3.1.1</a><br>• <a href="mailto:&#99;&#x6f;&#x6c;&#111;&#114;&#45;&#x6e;&#97;&#x6d;&#x65;&#64;&#x32;&#46;&#48;&#46;&#49;">color-name@2.0.1</a><br>• <a href="mailto:&#99;&#111;&#x6c;&#111;&#114;&#x2d;&#x73;&#116;&#114;&#105;&#110;&#x67;&#64;&#50;&#46;&#x31;&#46;&#49;">color-string@2.1.1</a><br>• <a href="mailto:&#119;&#x72;&#97;&#x70;&#45;&#x61;&#110;&#115;&#105;&#x40;&#57;&#46;&#48;&#x2e;&#49;">wrap-ansi@9.0.1</a><br>• <a href="mailto:&#x73;&#117;&#x70;&#112;&#111;&#114;&#116;&#115;&#x2d;&#104;&#121;&#x70;&#x65;&#x72;&#x6c;&#x69;&#110;&#x6b;&#x73;&#x40;&#52;&#x2e;&#x31;&#46;&#49;">supports-hyperlinks@4.1.1</a><br>• <a href="mailto:&#x73;&#116;&#x72;&#x69;&#112;&#45;&#97;&#x6e;&#115;&#105;&#64;&#55;&#46;&#49;&#46;&#x31;">strip-ansi@7.1.1</a><br>• <a href="mailto:&#x73;&#108;&#x69;&#99;&#x65;&#45;&#97;&#x6e;&#x73;&#x69;&#64;&#x37;&#x2e;&#x31;&#x2e;&#49;">slice-ansi@7.1.1</a><br>• <a href="mailto:&#115;&#x69;&#109;&#112;&#x6c;&#x65;&#x2d;&#115;&#x77;&#x69;&#x7a;&#122;&#108;&#101;&#x40;&#48;&#46;&#50;&#46;&#51;">simple-swizzle@0.2.3</a><br>• <a href="mailto:&#105;&#115;&#45;&#x61;&#114;&#114;&#x61;&#121;&#105;&#x73;&#104;&#x40;&#48;&#46;&#x33;&#x2e;&#x33;">is-arrayish@0.3.3</a><br>• <a href="mailto:&#x65;&#114;&#x72;&#111;&#114;&#45;&#101;&#x78;&#x40;&#x31;&#46;&#x33;&#46;&#51;">error-ex@1.3.3</a><br>• <a href="mailto:&#x68;&#x61;&#115;&#45;&#x61;&#110;&#x73;&#x69;&#64;&#54;&#46;&#48;&#x2e;&#x31;">has-ansi@6.0.1</a><br>• <a href="mailto:&#97;&#110;&#115;&#x69;&#x2d;&#114;&#101;&#x67;&#x65;&#120;&#64;&#x36;&#x2e;&#50;&#46;&#49;">ansi-regex@6.2.1</a><br>• <a href="mailto:&#x61;&#x6e;&#115;&#105;&#45;&#x73;&#x74;&#x79;&#x6c;&#101;&#115;&#64;&#x36;&#46;&#x32;&#x2e;&#x32;">ansi-styles@6.2.2</a><br>• <a href="mailto:&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#115;&#45;&#99;&#x6f;&#108;&#x6f;&#114;&#x40;&#49;&#48;&#x2e;&#x32;&#x2e;&#49;">supports-color@10.2.1</a><br>• <a href="mailto:&#112;&#x72;&#x6f;&#x74;&#111;&#45;&#x74;&#x69;&#110;&#107;&#101;&#x72;&#45;&#x77;&#x63;&#64;&#49;&#46;&#x38;&#46;&#x37;">proto-tinker-wc@1.8.7</a><br>• <a href="mailto:&#x64;&#101;&#x62;&#117;&#x67;&#64;&#x34;&#46;&#x34;&#x2e;&#x32;">debug@4.4.2</a></p>
-<p><strong>2、<a target="_blank" rel="noopener" href="https://blog.sangeeth.dev/posts/accurate-text-lengths-with-intl-segmenter-api/">Accurate text lengths with <code>Intl.Segmenter</code> API</a>[^3]</strong></p>
-<p>标签：JavaScript</p>
-<p>作者利用 Intl.Segmenter 方法来准确地获得符合人类直觉的颜文字长度。颜文字会以 Unicode 的方式在代码中表示，直接转为 Array 获取长度往往会不符合我们的直觉。当我们处理一些非规则的字符串时，可以多一种思路。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-string">&quot;hello&quot;</span>.<span class="hljs-property">length</span> <span class="hljs-comment">// 5</span><br><br><span class="hljs-string">&quot;🌝&quot;</span>.<span class="hljs-property">length</span>    <span class="hljs-comment">// 2</span><br><br><span class="hljs-string">&quot;🇮🇳&quot;</span>.<span class="hljs-property">length</span>    <span class="hljs-comment">// 4</span><br><br><span class="hljs-string">&quot;👨‍👩‍👧‍👦&quot;</span>.<span class="hljs-property">length</span>    <span class="hljs-comment">// 11</span><br><br><span class="hljs-string">&quot;दरबार&quot;</span>.<span class="hljs-property">length</span>  <span class="hljs-comment">// 5</span><br><br><span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(&#123; <span class="hljs-attr">length</span>: 🌝.<span class="hljs-property">length</span> &#125;, (_, i) = 🌝[i])<br><span class="hljs-comment">// [ \ud83c, \udf1d ] ⇒ length 2</span><br></code></pre></td></tr></table></figure>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://koreajoongangdaily.joins.com/news/2025-10-01/national/socialAffairs/NIRS-fire-destroys-governments-cloud-storage-system-no-backups-available/2412936">NIRS fire destroys government’s cloud storage system, no backups available</a>[^4]</strong></p>
+<p>标签：思考</p>
+<p>一场大火烧毁了韩国政府部门的数据，再次见证“草台班子”理论。 不知道这算不算新时代的“火龙烧仓”？</p>
+<p>不过单从技术角度来说，数据上云居然没有异地备份显然这个流程是存在问题的。不知道是韩国地方太小还是要省经费呢？</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510121328008.jpg" srcset="/weekly/img/loading.gif" lazyload></p>
 <hr>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://sspai.com/post/102420">也许是最适合普通人的「弹唱」入门设备：Musspark AI 随弹吉他 S1 mini 体验 - 少数派</a>[^4]</strong></p>
-<p>标签：FUN</p>
-<p>最近入手的新”玩具“ Musspark AI 随弹吉他 S1 mini。</p>
-<p>一直就觉得吉他弹唱很酷（也更容易追妹子），早在十年前，我有稍微自学过吉他，但因为手小 + 没时间，实在学不会和弦就放弃了。这次在看到少数派的编辑推荐后就非常心水。冷静了两天后，拿了优惠券下单。</p>
-<p>到货后玩了两天非常地开心和解压，可以自己控制节奏的弹唱感觉很棒。和玩音游一样，非常容易上手。没想到当年的梦想在十年后以这种方式实现了（虽然不是真的吉他）。</p>
-<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/musspark.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://github.com/looplj/axonhub?tab=readme-ov-file">looplj&#x2F;axonhub: AxonHub is a modern AI gateway system that provides a unified OpenAI, Anthropic, and AI SDK compatible API</a>[^5]</strong></p>
+<p>标签：Tools,AI</p>
+<p>一个统一的 AI 网关，相当于在大模型和应用之间加了一层。这一层可以统一不同模型的 API 方便应用统一对接，同时可以对流量等进行监控。</p>
+<p>如果有做 AI 相关应用，这个应该很有用。首先可以降低后期换模型的成本，同时也多了一个监控的手段和收费的依据（按流量收费）。</p>
+<p><img src="https://github.com/looplj/axonhub/raw/unstable/docs/axonhub-architecture-light.svg" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>2、<a target="_blank" rel="noopener" href="https://www.email4.fun/">Email Server Configuration Lookup</a>[^6]</strong></p>
+<p>标签：Tools</p>
+<p>一个可以查看 Email 服务配置的工具网站，只要输入邮箱地址即可查看到 SMTP、IMAP、POP3 的相关信息，很方便。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510121330325.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>3、<a target="_blank" rel="noopener" href="https://github.com/rustfs/rustfs">rustfs&#x2F;rustfs: 🚀 High-performance distributed object storage for MinIO  alternative.</a>[^8]</strong></p>
+<p>标签：Tools</p>
+<p>一个使用 Rust 编写的高性能分布式对象存储软件，与 MinIO 一样兼容 S3 的 API。</p>
+<p>最近刚好利用 MinIO 完成了 S3 的单元测试，才注意到了 License 的问题（MinIO 的社区版只允许开发和测试，如果要上生产就必须要付费）。</p>
+<p>可能是被大数据监视了，给我推了 RustFS。其 License 为 Apache 2.0 比 MinIO 更友好，也可以用于正式软件发布。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510121332570.png" srcset="/weekly/img/loading.gif" lazyload></p>
 <hr>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h2><ul>
-<li>[1] Free for Developers: <a target="_blank" rel="noopener" href="https://free-for.dev/#/?id=table-of-contents">https://free-for.dev/#/?id=table-of-contents</a></li>
-<li>[2] npm Author Qix Compromised via Phishing Email in Major Suppl…: <a target="_blank" rel="noopener" href="https://socket.dev/blog/npm-author-qix-compromised-in-major-supply-chain-attack">https://socket.dev/blog/npm-author-qix-compromised-in-major-supply-chain-attack</a></li>
-<li>[3] Accurate text lengths with <code>Intl.Segmenter</code> API: <a target="_blank" rel="noopener" href="https://blog.sangeeth.dev/posts/accurate-text-lengths-with-intl-segmenter-api/">https://blog.sangeeth.dev/posts/accurate-text-lengths-with-intl-segmenter-api/</a></li>
-<li>[4] 也许是最适合普通人的「弹唱」入门设备：Musspark AI 随弹吉他 S1 mini 体验 - 少数派: <a target="_blank" rel="noopener" href="https://sspai.com/post/102420">https://sspai.com/post/102420</a></li>
-<li>[5] LazyTyper官网 - 免费精准的Whisper语音输入，支持中英日韩等多语言混输: <a target="_blank" rel="noopener" href="https://lazytyper.com/zh">https://lazytyper.com/zh</a></li>
+<li>[1] 15 Recent Node.js Features that Replace Popular npm Packages: <a target="_blank" rel="noopener" href="https://nodesource.com/blog/nodejs-features-replacing-npm-packages">https://nodesource.com/blog/nodejs-features-replacing-npm-packages</a></li>
+<li>[2] lirantal&#x2F;npm-security-best-practices: Collection of npm package manager Security Best Practices: <a target="_blank" rel="noopener" href="https://github.com/lirantal/npm-security-best-practices?tab=readme-ov-file#7-no-plaintext-secrets-in-env-files">https://github.com/lirantal/npm-security-best-practices?tab=readme-ov-file#7-no-plaintext-secrets-in-env-files</a></li>
+<li>[3] How to group arrays in JavaScript without reduce() - Matt Smith: <a target="_blank" rel="noopener" href="https://allthingssmitty.com/2025/10/06/grouping-arrays-in-modern-javascript-object-groupby-and-map-groupby/">https://allthingssmitty.com/2025/10/06/grouping-arrays-in-modern-javascript-object-groupby-and-map-groupby/</a></li>
+<li>[4] NIRS fire destroys government’s cloud storage system, no backups available: <a target="_blank" rel="noopener" href="https://koreajoongangdaily.joins.com/news/2025-10-01/national/socialAffairs/NIRS-fire-destroys-governments-cloud-storage-system-no-backups-available/2412936">https://koreajoongangdaily.joins.com/news/2025-10-01/national/socialAffairs/NIRS-fire-destroys-governments-cloud-storage-system-no-backups-available/2412936</a></li>
+<li>[5] looplj&#x2F;axonhub: AxonHub is a modern AI gateway system that provides a unified OpenAI, Anthropic, and AI SDK compatible API: <a target="_blank" rel="noopener" href="https://github.com/looplj/axonhub?tab=readme-ov-file">https://github.com/looplj/axonhub?tab=readme-ov-file</a></li>
+<li>[6] Email Server Configuration Lookup: <a target="_blank" rel="noopener" href="https://www.email4.fun/">https://www.email4.fun/</a></li>
+<li>[7] Who needs git when you have 1M context windows?: <a target="_blank" rel="noopener" href="https://www.alexmolas.com/2025/07/28/unexpected-benefit-llm.html">https://www.alexmolas.com/2025/07/28/unexpected-benefit-llm.html</a></li>
+<li>[8] rustfs&#x2F;rustfs: 🚀 High-performance distributed object storage for MinIO  alternative.: <a target="_blank" rel="noopener" href="https://github.com/rustfs/rustfs">https://github.com/rustfs/rustfs</a></li>
 </ul>
 
                 
@@ -348,8 +425,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>每周见闻（33）：用 AI 拥抱的自己梦想</div>
-      <div>https://konata9.github.io/weekly/2025/09/14/33-每周见闻-20250907_20250914/</div>
+      <div>每周见闻：真遇到了“一行代码”造成的 Bug 了</div>
+      <div>https://konata9.github.io/weekly/2025/10/12/37-每周见闻-20251005_20251012/</div>
     </div>
     <div class="license-meta">
       
@@ -361,7 +438,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年9月14日</div>
+          <div>2025年10月12日</div>
         </div>
       
       
@@ -405,18 +482,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/weekly/2025/09/21/34-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250914_20250921/" title="每周见闻（34）：AWS 成本优化实践与数字游民一日体验">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">每周见闻（34）：AWS 成本优化实践与数字游民一日体验</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/weekly/2025/09/07/32-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250831_20250907/" title="每周见闻(32)：人生最好的架构，是为自己而设计">
-                        <span class="hidden-mobile">每周见闻(32)：人生最好的架构，是为自己而设计</span>
+                      <a href="/weekly/2025/10/06/36-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250929_20251006/" title="每周见闻(36)：Node.js 其实也有多线程">
+                        <span class="hidden-mobile">每周见闻(36)：Node.js 其实也有多线程</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
