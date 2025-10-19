@@ -21,30 +21,28 @@
   <meta name="author" content="Konata">
   <meta name="keywords" content="此方,Konata,Konata9,周刊,分享,记录,技术">
   
-    <meta name="description" content="每周见闻：2025-10-05 - 2025-10-12 一行代码造成的 Bug之前遇到的“一行代码造成的 Bug”。框框一顿调查后，发现就是 PO 的需求。 觉得很有意思，就记录一下：谁动了我的数据？一个 Bug 背后的“一行代码”真凶 如果单元测试能更完善一点，这个问题可能会在更早的阶段就暴露了。  Coding1、15 Recent Node.js Features that Replace">
+    <meta name="description" content="每周见闻：2025-10-12 - 2025-10-19 天差地别的 Vibe Coding之前正好用 Vibe Coding 了两个项目。体验是天差地别，对熟悉的技术栈确实是提效神奇；但对不熟悉的技术栈，则是任人摆布、战战兢兢。 于是就把自己的感受记录一下：我的两次 Vibe Coding 经历，一次天堂，一次地狱 工具1、rictic&#x2F;jsonriver: A simple, fas">
 <meta property="og:type" content="article">
-<meta property="og:title" content="每周见闻：真遇到了“一行代码”造成的 Bug 了">
-<meta property="og:url" content="https://konata9.github.io/weekly/2025/10/12/37-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20251005_20251012/index.html">
+<meta property="og:title" content="每周见闻(38)：Vibe Coding 的不同体验">
+<meta property="og:url" content="https://konata9.github.io/weekly/2025/10/19/38-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20251012_20251019/index.html">
 <meta property="og:site_name" content="此方的手帐">
-<meta property="og:description" content="每周见闻：2025-10-05 - 2025-10-12 一行代码造成的 Bug之前遇到的“一行代码造成的 Bug”。框框一顿调查后，发现就是 PO 的需求。 觉得很有意思，就记录一下：谁动了我的数据？一个 Bug 背后的“一行代码”真凶 如果单元测试能更完善一点，这个问题可能会在更早的阶段就暴露了。  Coding1、15 Recent Node.js Features that Replace">
+<meta property="og:description" content="每周见闻：2025-10-12 - 2025-10-19 天差地别的 Vibe Coding之前正好用 Vibe Coding 了两个项目。体验是天差地别，对熟悉的技术栈确实是提效神奇；但对不熟悉的技术栈，则是任人摆布、战战兢兢。 于是就把自己的感受记录一下：我的两次 Vibe Coding 经历，一次天堂，一次地狱 工具1、rictic&#x2F;jsonriver: A simple, fas">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510071549352.png">
-<meta property="og:image" content="https://images.ctfassets.net/hspc7zpa5cvq/6F0nBbgh1IqDHIKbZzwqhs/9c248deadad6ee386909e92203f4556f/15_Features.png">
-<meta property="og:image" content="https://repository-images.githubusercontent.com/1068329305/d834eb95-ee0e-4b65-9b48-45f24be6fce8">
-<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510121328008.jpg">
-<meta property="og:image" content="https://github.com/looplj/axonhub/raw/unstable/docs/axonhub-architecture-light.svg">
-<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510121330325.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510121332570.png">
-<meta property="article:published_time" content="2025-10-12T05:21:56.000Z">
-<meta property="article:modified_time" content="2025-10-12T06:20:50.906Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510191404063.png">
+<meta property="og:image" content="https://helium.computer/embed.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510191405183.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510191406906.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510191407445.png">
+<meta property="article:published_time" content="2025-10-19T06:01:47.000Z">
+<meta property="article:modified_time" content="2025-10-19T06:17:07.152Z">
 <meta property="article:author" content="Konata">
 <meta property="article:tag" content="此方,Konata,Konata9,周刊,分享,记录,技术">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510071549352.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510191404063.png">
   
   
   
-  <title>每周见闻：真遇到了“一行代码”造成的 Bug 了 - 此方的手帐</title>
+  <title>每周见闻(38)：Vibe Coding 的不同体验 - 此方的手帐</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -218,7 +216,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="每周见闻：真遇到了“一行代码”造成的 Bug 了"></span>
+            <span id="subtitle" data-typed-text="每周见闻(38)：Vibe Coding 的不同体验"></span>
           
         </div>
 
@@ -229,8 +227,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-10-12 13:21" pubdate>
-          2025年10月12日 下午
+        <time datetime="2025-10-19 14:01" pubdate>
+          2025年10月19日 下午
         </time>
       </span>
     
@@ -241,7 +239,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          966 字
         
       </span>
     
@@ -252,7 +250,7 @@
         
         
         
-          14 分钟
+          11 分钟
         
       </span>
     
@@ -289,124 +287,53 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">每周见闻：真遇到了“一行代码”造成的 Bug 了</h1>
+            <h1 id="seo-header">每周见闻(38)：Vibe Coding 的不同体验</h1>
             
             
               <div class="markdown-body">
                 
-                <p>每周见闻：2025-10-05 - 2025-10-12</p>
-<h2 id="一行代码造成的-Bug"><a href="#一行代码造成的-Bug" class="headerlink" title="一行代码造成的 Bug"></a>一行代码造成的 Bug</h2><p>之前遇到的“一行代码造成的 Bug”。框框一顿调查后，发现就是 PO 的需求。</p>
-<p>觉得很有意思，就记录一下：<br><a href="https://konata9.github.io/article/q0kuswk4/">谁动了我的数据？一个 Bug 背后的“一行代码”真凶</a></p>
-<p>如果单元测试能更完善一点，这个问题可能会在更早的阶段就暴露了。</p>
-<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510071549352.png" srcset="/weekly/img/loading.gif" lazyload></p>
-<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://nodesource.com/blog/nodejs-features-replacing-npm-packages">15 Recent Node.js Features that Replace Popular npm Packages</a>[^1]</strong></p>
-<p>标签：Node.js,Security</p>
-<p>15 个可以被 Node.js 最新特性替换的 npm 包。由于此前 NPM 上的”投毒“事件，使用 Node.js 的核心库会更加安全，项目体积也能更小一些。</p>
-<p>其中有一些还处于实验阶段，以下功能在 <code>LTS</code> 版本已处于稳定阶段：</p>
-<ol>
-<li><code>fetch() →  node-fetch</code> ：Node 18+</li>
-<li><code>node:test → 测试框架(mocha, jest  等)</code>：Node 20+ </li>
-<li><code>util.styleText() → chalk / kleur</code> ：Node 22+ （有点太新了，<code>chalk</code> 是之前被”投毒“ 的依赖）</li>
-<li><code>util.stripVTControlCharacters() → ansi-colors / strip-ansi</code> ：原生但使用场景不多</li>
-<li><code>fs.glob() → glob</code> ：Node 22+ </li>
-<li><code>fs.rm(&#123; recursive: true &#125;) → rimraf</code>：Node 18+</li>
-<li><code>fs.mkdir(&#123; recursive: true &#125;) → mkdirp</code> ：Node 10+ (加入以来就是稳定阶段）</li>
-<li><code>crypto.randomUUID() → uuid (v4)</code>：Node 17+ (加入以来就是稳定阶段）</li>
-<li><code>Buffer, atob, btoa → base64-js / atob polyfills</code>：Node 20+</li>
-<li><code>EventTarget → event-target-shim</code> ：Node 15+</li>
-</ol>
-<p><img src="https://images.ctfassets.net/hspc7zpa5cvq/6F0nBbgh1IqDHIKbZzwqhs/9c248deadad6ee386909e92203f4556f/15_Features.png" srcset="/weekly/img/loading.gif" lazyload></p>
-<p><strong>2、<a target="_blank" rel="noopener" href="https://github.com/lirantal/npm-security-best-practices?tab=readme-ov-file#7-no-plaintext-secrets-in-env-files">lirantal&#x2F;npm-security-best-practices: Collection of npm package manager Security Best Practices</a>[^2]</strong></p>
-<p>标签：Node.js,Security</p>
-<p>另一篇关于 NPM 的最佳安全实践。这篇集中列举了 12 条，与<a href="https://konata9.github.io/weekly/2025/09/28/35-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250921_20250928/">上周的那篇</a>略有不同主要偏重在开发者视角。</p>
-<p>两篇都提到的部分有：</p>
-<ol>
-<li>禁用 LifeCycle 命令（如 <code>postinstall</code> 等）</li>
-<li>设置一个冷静期（在新版本发布后多少天再更新）</li>
-<li>减少依赖数量（如使用原生方法代替三方依赖）</li>
-<li>启用 lockfile（如 <code>package-lock.json</code>）</li>
-</ol>
-<p><img src="https://repository-images.githubusercontent.com/1068329305/d834eb95-ee0e-4b65-9b48-45f24be6fce8" srcset="/weekly/img/loading.gif" lazyload></p>
-<p><strong>3、<a target="_blank" rel="noopener" href="https://allthingssmitty.com/2025/10/06/grouping-arrays-in-modern-javascript-object-groupby-and-map-groupby/">How to group arrays in JavaScript without reduce() - Matt Smith</a>[^3]</strong></p>
+                <p>每周见闻：2025-10-12 - 2025-10-19</p>
+<h2 id="天差地别的-Vibe-Coding"><a href="#天差地别的-Vibe-Coding" class="headerlink" title="天差地别的 Vibe Coding"></a>天差地别的 Vibe Coding</h2><p>之前正好用 Vibe Coding 了两个项目。体验是天差地别，对熟悉的技术栈确实是提效神奇；但对不熟悉的技术栈，则是任人摆布、战战兢兢。</p>
+<p>于是就把自己的感受记录一下：<br><a href="https://konata9.github.io/article/f0ltn2jl/">我的两次 Vibe Coding 经历，一次天堂，一次地狱</a></p>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://github.com/rictic/jsonriver">rictic&#x2F;jsonriver: A simple, fast streaming JSON parser built on standards.</a>[^1]</strong></p>
+<p>标签：Tools,JavaScript,Node.js</p>
+<p>一个以流的方式输出 JSON 数据的库，小巧、快速、无依赖。适合用于网络请求或者语言模型，流式输出对话。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs javascript">&#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Alex&quot;</span>, <span class="hljs-string">&quot;keys&quot;</span>: [<span class="hljs-number">1</span>, <span class="hljs-number">20</span>, <span class="hljs-number">300</span>]&#125;<br><br><span class="hljs-comment">// 会以流的方式输出</span><br>&#123;&#125;<br>&#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&quot;</span>&#125;<br>&#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;A&quot;</span>&#125;<br>&#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Al&quot;</span>&#125;<br>&#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Ale&quot;</span>&#125;<br>&#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Alex&quot;</span>&#125;<br>&#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Alex&quot;</span>, <span class="hljs-string">&quot;keys&quot;</span>: []&#125;<br>&#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Alex&quot;</span>, <span class="hljs-string">&quot;keys&quot;</span>: [<span class="hljs-number">1</span>]&#125;<br>&#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Alex&quot;</span>, <span class="hljs-string">&quot;keys&quot;</span>: [<span class="hljs-number">1</span>, <span class="hljs-number">20</span>]&#125;<br>&#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Alex&quot;</span>, <span class="hljs-string">&quot;keys&quot;</span>: [<span class="hljs-number">1</span>, <span class="hljs-number">20</span>, <span class="hljs-number">300</span>]&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>2、<a target="_blank" rel="noopener" href="https://github.com/law-chain-hot/websocket-devtools">law-chain-hot&#x2F;websocket-devtools: WebSocket debugging tool with real-time monitoring, message simulation, and traffic interception for developers ｜ 专业的WebSocket调试工具，提供实时监控、消息模拟和流量拦截功能</a>[^3]</strong></p>
+<p>标签：Tools,Coding</p>
+<p>一个在 Chrome 插件，可以用来调试 WebSocket。功能非常强大，包括了实时监控、后台监控、消息模拟、流量控制等主要功能。有用到 WebSocket 并且有调试需求的小伙伴可以关注一下。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510191404063.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>3、<a target="_blank" rel="noopener" href="https://helium.computer/">Helium Browser</a>[^6]</strong></p>
+<p>标签：Tools</p>
+<p>一个移除了 Google 相关服务的 Chrome 内核的浏览器，自带 Tab 分割以及广告阻止，专为用户隐私打造。看来很多人对 Chrome 中的 ”私货” 很不满了。这个浏览器就时基于此前 ungoogled-chromium 项目进行再次开发的。</p>
+<p>由于会限制 Google 的相关服务，默认会阻止 Chrome 商店的下载。需要安装插件时可以使用 chromium-web-store 这个项目。</p>
+<p>我目前在用 Zen，这是基于 FireFox 移除 Mozilia 相关服务的浏览器。正在考虑再次切换过去，毕竟 Chrome 上好用的插件更多。</p>
+<p><img src="https://helium.computer/embed.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<hr>
+<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://github.com/isaacs/node-lru-cache">isaacs&#x2F;node-lru-cache: A fast cache that automatically deletes the least recently used items</a>[^2]</strong></p>
 <p>标签：Node.js,JavaScript</p>
-<p>JavaScript 提供的 <code>Object.groupBy()</code> 和 <code>Map.groupBy()</code> 两个新方法 。<br><code>Object.groupBy()</code> 类似 lodash 中的方法，可以对数组进行分类，返回 JS 对象；而 <code>Map.groupBy()</code> 则返回的是一个 Map 对象，并保持插入顺序。具体的差别可以见下表：</p>
-<table>
-<thead>
-<tr>
-<th>Use case</th>
-<th>Object.groupBy()</th>
-<th>Map.groupBy()</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>String keys only</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Non-string keys (numbers, objects)</td>
-<td>❌</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>JSON serialization</td>
-<td>✅</td>
-<td>❌</td>
-</tr>
-<tr>
-<td>Preserving insertion order</td>
-<td>❌</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Iteration with .entries()</td>
-<td>❌</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Simplicity and readability</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-</tbody></table>
-<p>这两个 API 比较新 Node 需要 21+。因此暂时还得继续使用用 <code>lodash</code> 或者 <code>reduce</code>。</p>
-<p><strong>4、<a target="_blank" rel="noopener" href="https://www.alexmolas.com/2025/07/28/unexpected-benefit-llm.html">Who needs git when you have 1M context windows?</a>[^7]</strong></p>
-<p>标签：AI,Coding,思考</p>
-<p>与之前 AI “删库跑路“ 的事件相反，这一次 AI 帮助作者恢复的代码。</p>
-<p>起因是作者优化了模型，将指标提供 5%。然而在经过代码优化后，反而下降了 2%。由于作者没有进行过 commit 并没有办法回滚代码。在多次尝试无果后，最终利用 Gimini 2.5-pro 1M 上下文的窗口还原出了最初的代码。</p>
-<p>当然，作者说的如果有一个能记住一切 LLM 就不需要 Git 最佳实践，我并不认同。</p>
-<hr>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://koreajoongangdaily.joins.com/news/2025-10-01/national/socialAffairs/NIRS-fire-destroys-governments-cloud-storage-system-no-backups-available/2412936">NIRS fire destroys government’s cloud storage system, no backups available</a>[^4]</strong></p>
-<p>标签：思考</p>
-<p>一场大火烧毁了韩国政府部门的数据，再次见证“草台班子”理论。 不知道这算不算新时代的“火龙烧仓”？</p>
-<p>不过单从技术角度来说，数据上云居然没有异地备份显然这个流程是存在问题的。不知道是韩国地方太小还是要省经费呢？</p>
-<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510121328008.jpg" srcset="/weekly/img/loading.gif" lazyload></p>
-<hr>
-<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://github.com/looplj/axonhub?tab=readme-ov-file">looplj&#x2F;axonhub: AxonHub is a modern AI gateway system that provides a unified OpenAI, Anthropic, and AI SDK compatible API</a>[^5]</strong></p>
-<p>标签：Tools,AI</p>
-<p>一个统一的 AI 网关，相当于在大模型和应用之间加了一层。这一层可以统一不同模型的 API 方便应用统一对接，同时可以对流量等进行监控。</p>
-<p>如果有做 AI 相关应用，这个应该很有用。首先可以降低后期换模型的成本，同时也多了一个监控的手段和收费的依据（按流量收费）。</p>
-<p><img src="https://github.com/looplj/axonhub/raw/unstable/docs/axonhub-architecture-light.svg" srcset="/weekly/img/loading.gif" lazyload></p>
-<p><strong>2、<a target="_blank" rel="noopener" href="https://www.email4.fun/">Email Server Configuration Lookup</a>[^6]</strong></p>
-<p>标签：Tools</p>
-<p>一个可以查看 Email 服务配置的工具网站，只要输入邮箱地址即可查看到 SMTP、IMAP、POP3 的相关信息，很方便。</p>
-<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510121330325.png" srcset="/weekly/img/loading.gif" lazyload></p>
-<p><strong>3、<a target="_blank" rel="noopener" href="https://github.com/rustfs/rustfs">rustfs&#x2F;rustfs: 🚀 High-performance distributed object storage for MinIO  alternative.</a>[^8]</strong></p>
-<p>标签：Tools</p>
-<p>一个使用 Rust 编写的高性能分布式对象存储软件，与 MinIO 一样兼容 S3 的 API。</p>
-<p>最近刚好利用 MinIO 完成了 S3 的单元测试，才注意到了 License 的问题（MinIO 的社区版只允许开发和测试，如果要上生产就必须要付费）。</p>
-<p>可能是被大数据监视了，给我推了 RustFS。其 License 为 Apache 2.0 比 MinIO 更友好，也可以用于正式软件发布。</p>
-<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510121332570.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<p>一个 Node.js 的 LRU Cache 库，只需要简单配置就能使用。这周 Code Review 的时候，被同事推荐来替换原生的 Map 做内存管理。</p>
+<p>这个库通过双链表的方式对 Cache 进行管理，效率很高。代码也不是特别多，都在一个文件中，后面应该会去读一读源码。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510191405183.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>2、<a target="_blank" rel="noopener" href="https://github.com/hyparam/hyparquet">hyparam&#x2F;hyparquet: parquet file parser for javascript</a>[^4]</strong></p>
+<p>标签：Tools,Node.js,JavaScript</p>
+<p>一个可以解析 .parquet 文件内容的 Node.js 库。最近正好需要解析一些 DataBricks 导出的数据，尝试了好几个库，发现这个最好用（主要是在时间的解析上，这个库不需要额外配置就能正确解析）。</p>
+<p>还有一个配套库 hyparquet-writer 可以用来创建 .parquet 文件，对单元测试和制作 Mock 数据很有帮助。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510191406906.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>3、<a target="_blank" rel="noopener" href="https://pzarycki.com/en/posts/js-null/">Why typeof null &#x3D;&#x3D;&#x3D; object</a>[^5]</strong></p>
+<p>标签：JavaScript,Node.js</p>
+<p>一篇从底层代码介绍了 JavaScript 中 <code>typeof null === object</code> 的原因。由于 32 位系统与硬件的要求，需要将 <code>000</code> 作为对象标识符。而 <code>Null</code> 又可以被看作是全 <code>0</code> 的值，因此被视作对象。</p>
+<p>然而底层代码中有正确检测 <code>Null</code> 的方法，但 <code>typeof</code> 这个方法中没有使用。由于修改这个错误会不兼容现有的应用，所以这个修复也被 ECMA 拒绝了。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/202510191407445.png" srcset="/weekly/img/loading.gif" lazyload></p>
 <hr>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h2><ul>
-<li>[1] 15 Recent Node.js Features that Replace Popular npm Packages: <a target="_blank" rel="noopener" href="https://nodesource.com/blog/nodejs-features-replacing-npm-packages">https://nodesource.com/blog/nodejs-features-replacing-npm-packages</a></li>
-<li>[2] lirantal&#x2F;npm-security-best-practices: Collection of npm package manager Security Best Practices: <a target="_blank" rel="noopener" href="https://github.com/lirantal/npm-security-best-practices?tab=readme-ov-file#7-no-plaintext-secrets-in-env-files">https://github.com/lirantal/npm-security-best-practices?tab=readme-ov-file#7-no-plaintext-secrets-in-env-files</a></li>
-<li>[3] How to group arrays in JavaScript without reduce() - Matt Smith: <a target="_blank" rel="noopener" href="https://allthingssmitty.com/2025/10/06/grouping-arrays-in-modern-javascript-object-groupby-and-map-groupby/">https://allthingssmitty.com/2025/10/06/grouping-arrays-in-modern-javascript-object-groupby-and-map-groupby/</a></li>
-<li>[4] NIRS fire destroys government’s cloud storage system, no backups available: <a target="_blank" rel="noopener" href="https://koreajoongangdaily.joins.com/news/2025-10-01/national/socialAffairs/NIRS-fire-destroys-governments-cloud-storage-system-no-backups-available/2412936">https://koreajoongangdaily.joins.com/news/2025-10-01/national/socialAffairs/NIRS-fire-destroys-governments-cloud-storage-system-no-backups-available/2412936</a></li>
-<li>[5] looplj&#x2F;axonhub: AxonHub is a modern AI gateway system that provides a unified OpenAI, Anthropic, and AI SDK compatible API: <a target="_blank" rel="noopener" href="https://github.com/looplj/axonhub?tab=readme-ov-file">https://github.com/looplj/axonhub?tab=readme-ov-file</a></li>
-<li>[6] Email Server Configuration Lookup: <a target="_blank" rel="noopener" href="https://www.email4.fun/">https://www.email4.fun/</a></li>
-<li>[7] Who needs git when you have 1M context windows?: <a target="_blank" rel="noopener" href="https://www.alexmolas.com/2025/07/28/unexpected-benefit-llm.html">https://www.alexmolas.com/2025/07/28/unexpected-benefit-llm.html</a></li>
-<li>[8] rustfs&#x2F;rustfs: 🚀 High-performance distributed object storage for MinIO  alternative.: <a target="_blank" rel="noopener" href="https://github.com/rustfs/rustfs">https://github.com/rustfs/rustfs</a></li>
+<li>[1] rictic&#x2F;jsonriver: A simple, fast streaming JSON parser built on standards.: <a target="_blank" rel="noopener" href="https://github.com/rictic/jsonriver">https://github.com/rictic/jsonriver</a></li>
+<li>[2] isaacs&#x2F;node-lru-cache: A fast cache that automatically deletes the least recently used items: <a target="_blank" rel="noopener" href="https://github.com/isaacs/node-lru-cache">https://github.com/isaacs/node-lru-cache</a></li>
+<li>[3] law-chain-hot&#x2F;websocket-devtools: WebSocket debugging tool with real-time monitoring, message simulation, and traffic interception for developers ｜ 专业的WebSocket调试工具，提供实时监控、消息模拟和流量拦截功能: <a target="_blank" rel="noopener" href="https://github.com/law-chain-hot/websocket-devtools">https://github.com/law-chain-hot/websocket-devtools</a></li>
+<li>[4] hyparam&#x2F;hyparquet: parquet file parser for javascript: <a target="_blank" rel="noopener" href="https://github.com/hyparam/hyparquet">https://github.com/hyparam/hyparquet</a></li>
+<li>[5] Why typeof null &#x3D;&#x3D;&#x3D; object: <a target="_blank" rel="noopener" href="https://pzarycki.com/en/posts/js-null/">https://pzarycki.com/en/posts/js-null/</a></li>
+<li>[6] Helium Browser: <a target="_blank" rel="noopener" href="https://helium.computer/">https://helium.computer/</a></li>
 </ul>
 
                 
@@ -425,8 +352,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>每周见闻：真遇到了“一行代码”造成的 Bug 了</div>
-      <div>https://konata9.github.io/weekly/2025/10/12/37-每周见闻-20251005_20251012/</div>
+      <div>每周见闻(38)：Vibe Coding 的不同体验</div>
+      <div>https://konata9.github.io/weekly/2025/10/19/38-每周见闻-20251012_20251019/</div>
     </div>
     <div class="license-meta">
       
@@ -438,7 +365,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年10月12日</div>
+          <div>2025年10月19日</div>
         </div>
       
       
@@ -482,18 +409,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/weekly/2025/10/19/38-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20251012_20251019/" title="每周见闻(38)：Vibe Coding 的不同体验">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">每周见闻(38)：Vibe Coding 的不同体验</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/weekly/2025/10/06/36-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20250929_20251006/" title="每周见闻(36)：Node.js 其实也有多线程">
-                        <span class="hidden-mobile">每周见闻(36)：Node.js 其实也有多线程</span>
+                      <a href="/weekly/2025/10/12/37-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20251005_20251012/" title="每周见闻：真遇到了“一行代码”造成的 Bug 了">
+                        <span class="hidden-mobile">每周见闻：真遇到了“一行代码”造成的 Bug 了</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
