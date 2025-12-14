@@ -1,0 +1,786 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/weekly/img/fluid.png">
+  <link rel="icon" href="/weekly/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Konata">
+  <meta name="keywords" content="此方,Konata,Konata9,周刊,分享,记录,技术">
+  
+    <meta name="description" content="每周见闻：2025-12-07 - 2025-12-14 参观大恐龙展 今天借老婆的光去自然博物馆参观了恐龙大展。参观前先听了馆长的讲座，介绍了这次展览当中展出的化石。 馆长不愧是馆长，介绍生动且易懂，为后面的参观体验打下了基础。只是碍于时间，介绍只有 10 分钟，真是有点可惜。 题图就是这次展览的珍贵化石之一——寐龙化石。这只倒霉蛋在睡着的情况下被火山灰覆，窒息而死盖形成了化石，所以保存相当完好">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每周见闻（46）：React 再次出现漏洞！">
+<meta property="og:url" content="https://konata9.github.io/weekly/2025/12/14/46-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20251207_20251214/index.html">
+<meta property="og:site_name" content="此方的手帐">
+<meta property="og:description" content="每周见闻：2025-12-07 - 2025-12-14 参观大恐龙展 今天借老婆的光去自然博物馆参观了恐龙大展。参观前先听了馆长的讲座，介绍了这次展览当中展出的化石。 馆长不愧是馆长，介绍生动且易懂，为后面的参观体验打下了基础。只是碍于时间，介绍只有 10 分钟，真是有点可惜。 题图就是这次展览的珍贵化石之一——寐龙化石。这只倒霉蛋在睡着的情况下被火山灰覆，窒息而死盖形成了化石，所以保存相当完好">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/20251214214415325.jpg">
+<meta property="og:image" content="https://bear-images.sfo2.cdn.digitaloceanspaces.com/sol/appshunter-io-z8yor5zcqny-unsplash.webp">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/20251214211910559.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/20251214211953220.webp">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/20251214212027766.webp">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/20251214212027766.webp">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/20251214212355458.png">
+<meta property="og:image" content="https://tunnl.gg/og-image.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/20251214212925979.png">
+<meta property="article:published_time" content="2025-12-14T13:10:49.000Z">
+<meta property="article:modified_time" content="2025-12-14T14:13:30.190Z">
+<meta property="article:author" content="Konata">
+<meta property="article:tag" content="此方,Konata,Konata9,周刊,分享,记录,技术">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/20251214214415325.jpg">
+  
+  
+  
+  <title>每周见闻（46）：React 再次出现漏洞！ - 此方的手帐</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/weekly/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/weekly/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/weekly/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/weekly/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"konata9.github.io","root":"/weekly/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-HZE2KZXTWN"},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"BirbQk2IcLjcATgSrzYGJHe7-MdYXbMMI","app_key":"WrRy9Sjv7hCFj1jO9Tm10BYi","server_url":"https://birbqk2i.api.lncldglobal.com","path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"woyaola":null,"cnzz":null},"search_path":"/weekly/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/weekly/js/utils.js" ></script>
+  <script  src="/weekly/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-HZE2KZXTWN", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-HZE2KZXTWN');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/weekly/atom.xml" title="此方的手帐" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/weekly/">
+      <strong>此方的周刊</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/weekly/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/weekly/atom.xml" target="_self">
+                <i class="iconfont icon-rss-fill"></i>
+                <span>RSS</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://konata9.github.io" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>Blog</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/weekly/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="每周见闻（46）：React 再次出现漏洞！"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-12-14 21:10" pubdate>
+          2025年12月14日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          29 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">每周见闻（46）：React 再次出现漏洞！</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>每周见闻：2025-12-07 - 2025-12-14</p>
+<h2 id="参观大恐龙展"><a href="#参观大恐龙展" class="headerlink" title="参观大恐龙展"></a>参观大恐龙展</h2><p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/20251214214415325.jpg" srcset="/weekly/img/loading.gif" lazyload></p>
+<p>今天借老婆的光去自然博物馆参观了恐龙大展。参观前先听了馆长的讲座，介绍了这次展览当中展出的化石。</p>
+<p>馆长不愧是馆长，介绍生动且易懂，为后面的参观体验打下了基础。只是碍于时间，介绍只有 10 分钟，真是有点可惜。</p>
+<p>题图就是这次展览的珍贵化石之一——寐龙化石。这只倒霉蛋在睡着的情况下被火山灰覆，窒息而死盖形成了化石，所以保存相当完好。</p>
+<p>这次在听完介绍后再去参观，能知道哪些是这次展览的重点，直接提高了参观体验。</p>
+<h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://blog.solazy.me/20251209/">从豆包手机助手看手机底层智能的边界</a>[^1]</strong></p>
+<p>标签：AI,思考</p>
+<p>豆包手机助手，是上周很火的话题。其工程机也一度需要加价 1500 元以上。看到这个新闻的时候，我并没有觉得太意外，我认为 AI 操作手机底层是早晚的事。</p>
+<p>国内各大手机厂商自带的 AI 如小艺、小爱同学，只要他们愿意就可以做到。我也一直很好奇为什么没有厂商率先试水去做。这篇博客给了我答案，因为<strong>安全边界</strong>。</p>
+<p>从微信的秒封以及后续豆包限制相关指令操作就能看出这其中的安全边界。作者在博客中做了一个合理的假设：</p>
+<ul>
+<li>一套足够聪明的手机助手，可以「合理合法」地帮某个诈骗团伙自动维护成千上万个社交账号，模拟真实用户的日常行为，从而逃过风控的检测。</li>
+<li>可以自动阅读大量社交关系，从中识别出更容易被骗的人群，逐步筛选目标，再定制话术。 - 可以在模拟电话、语音聊天、视频通话时提供脚本、实时翻译、情绪引导，让骗局变得更像一场「精心彩排的戏」。</li>
+</ul>
+<p>这个假设并非做不到，因为都是现有技术的综合使用。并且作者也提到了如今手机对于个人的重要性，一旦将手机的权限全权交给了 AI 那么也意味着所有的隐私和偏好也会一并被厂商掌握。而出售隐私的代价，我们早已体会过莆田系的广告、竞价排名这些并非久远的记忆。</p>
+<p>如何保证 AI 是完全中立的呢？这点恐怕在现阶段很难做到，这背后的利益实在太大。诚然，我也希望能有一个钢铁侠那样的“贾维斯”。作者的这篇博客给了我一盆冷水，但也让我冷静下来重新认识到“安全”的边界。</p>
+<p>这里引用作者的观点：</p>
+<blockquote>
+<p>手机已经不再是一个简单的通讯工具，更像是一个人生活和身份的「浓缩投影」。在这种前提下，对手机底层智能助手保持一点迟疑，也许并不代表落后，只是出于对风险和不确定性的本能谨慎。</p>
+</blockquote>
+<p><img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/sol/appshunter-io-z8yor5zcqny-unsplash.webp" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>2、<a target="_blank" rel="noopener" href="https://tech.qimao.com/ji-yu-fei-shu-aily-da-jian-slsri-zhi-fen-xi-zhu-shou/">基于飞书 Aily 搭建 sls日志分析助手</a>[^3]</strong></p>
+<p>标签：AI,Tools,架构</p>
+<p>七猫团队利用飞书 Aily 结合阿里 SLS 搭建的智能日志分析助手，旨在解决传统日志分析效率低下的问题。之前也接触过类似的项目，用的是 RAG Flow 作为知识库。现在利用飞书 + 阿里 SLS 感觉搭建起来更方便。七猫团队的文章实践部分挺多的，感兴趣的朋友可以去原文看看。</p>
+<p>这个确实很有用，现在每次在 Kibana 上对日志的排查很是头疼。如果有这样一个 AI 可以帮助日志分析，可以极大程度地提高排查效率。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/20251214211910559.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>3、<a target="_blank" rel="noopener" href="https://www.aitradearena.com/research/we-ran-llms-for-8-months">AI Trade Arena</a>[^5]</strong></p>
+<p>标签：AI,FUN</p>
+<p>既上一次 AI 炒币后，这次是让 AI 以 10w 美元作为本金模拟 8 个月股票交易。虽然是模拟，但模型可以访问真实数据进行预测和操作。最后的结果 Grok 排名第一，DeepSeek 排名第二，Gemini 垫底。</p>
+<p>我目前也在尝试着让 DeepSeek 帮我选基金定投。现在已经 3 个月，目前持有是小正的。不过由于是定投，还需要再看更长的时间。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/20251214211953220.webp" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>4、<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/GJnGofgy1tpDpFjBHItpFw">每周AI观察：2025岁末AI模型选型指南</a>[^6]</strong></p>
+<p>标签：AI,大模型</p>
+<p>作者以 Openrouter 的数据为参考，给出了 2025 年末AI模型选型提供指导。分别从推理、非推理的模型权衡、缓存命中率等指标等进行分析。在 AI 使用率越来越高的今天，模型的成本和效率比也确实需要考虑。</p>
+<p>作者最后给出了建议：</p>
+<ol>
+<li>搞清楚自己的任务特点（输入输出比、是否需要深度推理）</li>
+<li>建立成本监控（特别是缓存命中率）</li>
+<li>定期review，跟着厂商升级</li>
+<li>不要迷信大杯，中小杯往往性价比更高</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/20251214212027766.webp" srcset="/weekly/img/loading.gif" lazyload></p>
+<hr>
+<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://lemire.me/blog/2025/11/29/how-fast-can-browsers-process-base64-data/">How fast can browsers process base64 data?</a>[^2]</strong></p>
+<p>标签：Coding,JavaScript,前端</p>
+<p>作者利用浏览器的 <code>Uint8Array.toBase64()</code> 和 <code>Uint8Array.fromBase64()</code> 方法，测试了现在浏览器解析 Base64 数据能力。当前浏览器对 Base64 的数据解析能力都非常强大。</p>
+<ul>
+<li>Safari和SigmaOS解码速度最快，达到9.4 GB&#x2F;s</li>
+<li>Chrome、Edge和Brave解码速度为4.6 GB&#x2F;s</li>
+<li>Servo和Firefox解码速度为0.40 GB&#x2F;s，且快于其编码速度</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/20251214212027766.webp" srcset="/weekly/img/loading.gif" lazyload></p>
+<p><strong>2、<a target="_blank" rel="noopener" href="https://pnpm.io/blog/2025/12/05/newsroom-npm-supply-chain-security">How We’re Protecting Our Newsroom from npm Supply Chain Attacks | pnpm</a>[^4]</strong></p>
+<p>标签：Security,Node.js,JavaScript</p>
+<p>西雅图时报通过引入 PNPM 从而躲过了此前的蠕虫 2.0 攻击。通过 PNPM 的配置设置三道防线，实现纵深防御的效果：</p>
+<ol>
+<li>禁止 pre-install 和 post-install </li>
+<li>设置冷却时间，不在第一时间更新最新依赖。</li>
+<li>设置信任策略。会阻止安装认证强度低的版本。</li>
+</ol>
+<p>这里的策略很值得我们学习。其中信任策略是我通过这篇文章首次学习到的概念，它指的是某次提交不是通过官方的 CI&#x2F;CD，而是从本地突然提交就会被系统认为不值得信任。第一次蠕虫攻击便是这样，攻击者直接从本地提交了带有恶意代码包。而信任策略就能防住这样的攻击。</p>
+<p>同时也提醒我们，依赖并非越新越好。针对线上系统，尤其是重要的业务系统，稳定永远大于一切。</p>
+<p><strong>3、<a target="_blank" rel="noopener" href="https://conventional-branch.github.io/zh/">约定式分支</a>[^7]</strong></p>
+<p>标签：Git,思考</p>
+<p>介绍了分支命名的约定范式，非常直观。如果引入 AI 分析的话，对 AI 也会很友好。目前工作中团队也在用这个范式，在 Code Review 时能很清楚地知道哪些 PR 比较重要（当然得靠自己，乱写也是可以的）。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">type/description<br></code></pre></td></tr></table></figure>
+<ul>
+<li>main：主要开发分支（例如 main、master 或 develop）</li>
+<li>feature&#x2F; (或 feat&#x2F;)：用于新功能（例如 feature&#x2F;add-login-page, feat&#x2F;add-login-page）</li>
+<li>bugfix&#x2F; (或 fix&#x2F;)：用于错误修复（例如 bugfix&#x2F;fix-header-bug, fix&#x2F;header-bug）</li>
+<li>hotfix&#x2F;：用于紧急修复（例如 hotfix&#x2F;security-patch）</li>
+<li>release&#x2F;：用于准备发布的分支（例如 release&#x2F;v1.2.0）</li>
+<li>chore&#x2F;：用于非代码任务，如依赖项、文档更新（例如 chore&#x2F;update-dependencies）</li>
+</ul>
+<p><strong>4、<a target="_blank" rel="noopener" href="https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components">Denial of Service and Source Code Exposure in React Server Components – React</a>[^10]</strong></p>
+<p>标签：Security,前端,JavaScript,Node.js</p>
+<p>React 在上周拿了 10 分满分的漏洞后，这周又爆出两个 CVE 漏洞。</p>
+<ul>
+<li>CVE-2025-55184 和 CVE-2025-67779 (CVSS 7.5) 可以通过恶意的 HTTP 请求造成无限循环从而服务拒绝响应的 。</li>
+<li>CVE-2025-55183 (CVSS 5.3) 则可以通过恶意 HTTP 请求造成源码泄漏，hardcode 在代码中的密钥等可能会泄露。</li>
+</ul>
+<p>由于是在上周的补丁上发现的漏洞，所以没有 workround 的方案，只能接着打补丁。最近接二连三的漏洞新闻，真让我不得不相信是为了衬托同行而在年底冲业绩（笑）</p>
+<p>同时，我一直关注的 B 站 UP 原子能对上次 10 分漏洞的分析视频也出来了，非常值得一看。《深度解读React满分漏洞，一个前端框架怎么炸掉半个互联网【让编程再次伟大#50】》。</p>
+<p>视频最后，他说这绝不会是 React 和 Vercel 的最后一个严重漏洞，没想到么快就应验了。</p>
+<p>这真是来自东方的神秘力量啊（其实和 Vercel 的推行策略有关，可以看看视频的分析）</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/20251214212355458.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<hr>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://tunnl.gg/">tunnl.gg | Expose localhost to the internet</a>[^8]</strong></p>
+<p>标签：Tools</p>
+<p>这个网站提供即时公共 URL，将本地服务器通过 SSH 暴露到互联网，无需安装或注册。支持自动 HTTPS 和随机子域名，实现快速部署和安全连接。</p>
+<p>不过由于和网站那边是关闭了 TLS 的，网站方在技术上是可以看到流量的（尽管他们已经声明不会查看）。因此在</p>
+<p><img src="https://tunnl.gg/og-image.jpg" srcset="/weekly/img/loading.gif" lazyload></p>
+<hr>
+<h2 id="Infra"><a href="#Infra" class="headerlink" title="Infra"></a>Infra</h2><p><strong>1、<a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/aws/introducing-aws-lambda-managed-instances-serverless-simplicity-with-ec2-flexibility/">Introducing AWS Lambda Managed Instances: Serverless simplicity with EC2 flexibility | Amazon Web Services</a>[^9]</strong></p>
+<p>标签：AWS,架构</p>
+<p>AWS 最新推出的服务，允许在托管的 EC2 上运行 Lambda。这样 Lambda 函数可以利用到 EC2 的 CPU 架构，比如适合 AI 的 Graviton4 实例。由于是托管实例，安全维护、自动扩所容也由 AWS 管理。</p>
+<p>简单来说就是 Lambda 跑在 EC2 上，所以省去 Lambda 的运行费用。收费构成变成了 Lambda 请求费用、EC2 费用以及 15% EC2 的维护费用。其中 EC2 的实例费用可以通过预留实例或者 Saving plan 来控制。适合那些运行频繁运行的 Lambda。</p>
+<p><img src="https://raw.githubusercontent.com/Konata9/pic-base/main/pics/20251214212925979.png" srcset="/weekly/img/loading.gif" lazyload></p>
+<hr>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h2><ul>
+<li>[1] 从豆包手机助手看手机底层智能的边界: <a target="_blank" rel="noopener" href="https://blog.solazy.me/20251209/">https://blog.solazy.me/20251209/</a></li>
+<li>[2] How fast can browsers process base64 data?: <a target="_blank" rel="noopener" href="https://lemire.me/blog/2025/11/29/how-fast-can-browsers-process-base64-data/">https://lemire.me/blog/2025/11/29/how-fast-can-browsers-process-base64-data/</a></li>
+<li>[3] 基于飞书 Aily 搭建 sls日志分析助手: <a target="_blank" rel="noopener" href="https://tech.qimao.com/ji-yu-fei-shu-aily-da-jian-slsri-zhi-fen-xi-zhu-shou/">https://tech.qimao.com/ji-yu-fei-shu-aily-da-jian-slsri-zhi-fen-xi-zhu-shou/</a></li>
+<li>[4] How We’re Protecting Our Newsroom from npm Supply Chain Attacks | pnpm: <a target="_blank" rel="noopener" href="https://pnpm.io/blog/2025/12/05/newsroom-npm-supply-chain-security">https://pnpm.io/blog/2025/12/05/newsroom-npm-supply-chain-security</a></li>
+<li>[5] AI Trade Arena: <a target="_blank" rel="noopener" href="https://www.aitradearena.com/research/we-ran-llms-for-8-months">https://www.aitradearena.com/research/we-ran-llms-for-8-months</a></li>
+<li>[6] 每周AI观察：2025岁末AI模型选型指南: <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/GJnGofgy1tpDpFjBHItpFw">https://mp.weixin.qq.com/s/GJnGofgy1tpDpFjBHItpFw</a></li>
+<li>[7] 约定式分支: <a target="_blank" rel="noopener" href="https://conventional-branch.github.io/zh/">https://conventional-branch.github.io/zh/</a></li>
+<li>[8] tunnl.gg | Expose localhost to the internet: <a target="_blank" rel="noopener" href="https://tunnl.gg/">https://tunnl.gg/</a></li>
+<li>[9] Introducing AWS Lambda Managed Instances: Serverless simplicity with EC2 flexibility | Amazon Web Services: <a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/aws/introducing-aws-lambda-managed-instances-serverless-simplicity-with-ec2-flexibility/">https://aws.amazon.com/blogs/aws/introducing-aws-lambda-managed-instances-serverless-simplicity-with-ec2-flexibility/</a></li>
+<li>[10] Denial of Service and Source Code Exposure in React Server Components – React: <a target="_blank" rel="noopener" href="https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components">https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components</a></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>每周见闻（46）：React 再次出现漏洞！</div>
+      <div>https://konata9.github.io/weekly/2025/12/14/46-每周见闻-20251207_20251214/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Konata</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年12月14日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-cc-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-cc-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/weekly/2025/12/07/45-%E6%AF%8F%E5%91%A8%E8%A7%81%E9%97%BB-20251130_20251207/" title="每周见闻(45)：Cloudflare 被 React 又又又搞炸啦！">
+                        <span class="hidden-mobile">每周见闻(45)：Cloudflare 被 React 又又又搞炸啦！</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    
+      <script>
+        Fluid.utils.loadComments('#disqus_thread', function() {
+          Fluid.utils.createCssLink('https://lib.baomitu.com/disqusjs/1.3.0/disqusjs.css');
+          Fluid.utils.createScript('https://lib.baomitu.com/disqusjs/1.3.0/disqus.js', function() {
+            new DisqusJS({
+              shortname: 'konata-blog',
+              apikey: 'AlTcCrDugoy7nYInPZA5SdHFdvQxfiUdMNuifiFG54hy9yqNHkj7wUrRFuJXmBrv'
+            });
+          });
+        });
+      </script>
+    
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/weekly/js/events.js" ></script>
+<script  src="/weekly/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/weekly/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/weekly/js/leancloud.js" ></script>
+
+  <script  src="/weekly/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/weekly/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
